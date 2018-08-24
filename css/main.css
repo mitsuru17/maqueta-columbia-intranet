@@ -1,0 +1,346 @@
+/*@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.toolbar {
+    background: rgba(255, 255, 255, 0.67);
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+    padding: 0 40px;
+}
+
+/*Burguer Menu*/
+.button_container {
+    position: relative;
+    top: 5%;
+    right: 2%;
+    height: 24px;
+    width: 34px;
+    cursor: pointer;
+    z-index: 100;
+    -webkit-transition: opacity .25s ease;
+    transition: opacity .25s ease;
+}
+
+.button_container:hover {
+    opacity: .7;
+}
+
+.button_container.active .top {
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+.button_container.active .middle {
+    opacity: 0;
+}
+
+.button_container.active .bottom {
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+}
+
+.button_container span {
+    background: #999;
+    border: none;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 8px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 16px;
+}
+
+.buttons-top {
+    text-align: right;
+}
+
+/*Buttons-top*/
+.notif {
+    display: inline-block;
+    background: url(../img/notificacion.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.logout {
+    display: inline-block;
+    background: url(../img/logout.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+/*SIDEBAR*/
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    color: #999;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid #ececec;
+    height: 60px;
+}
+
+.sidebar-header img {
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar ul p {
+    color: #999;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+.components li {
+
+    /*padding: 0 20px;*/
+    font-size: 14px;
+    border-left: 4px;
+    border-left-style: solid;
+    border-left-color: transparent;
+}
+
+li.academico {
+    border-left-color: #ffad00;
+}
+
+li.horarios {
+    border-left-color: #e60083;
+}
+
+li.pagos {
+    border-left-color: #008084;
+}
+
+li.tramites {
+    border-left-color: #ff8a0d;
+}
+
+li.descargas {
+    border-left-color: #009232;
+}
+
+.components li.active {
+    background: #003ba2;
+    color: white;
+}
+
+.collapse li:hover {
+    background: #e7e7e7;
+}
+
+.email-link {
+    background: #00ACC1;
+    color: white;
+}
+
+/*SIDEBAR USER PROFILE*/
+.profile-sidebar {
+    padding: 10px 0 10px 0;
+    margin: 14px 0;
+    background: #fff;
+}
+
+.profile-greeting {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-greeting strong {
+    font-weight: 700;
+}
+
+.profile-userpic {
+    text-align: center;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    box-shadow: 2px 2px 0 #3F51B5, -2px -2px 0 #3F51B5, 2px -2px 0 #3F51B5, -2px 2px 0 #3F51B5;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-usertitle-name {
+    color: #999;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-career {
+    text-transform: uppercase;
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 20px;
+    background: #e60083;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* ---------------------------------------------------
+CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+/*Custom Scroll Bar*/
+.mCSB_dragger_bar {
+    margin-right: 0 !important;
+}
+
+/* ---------------------------------------------------
+MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width:768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #content.active {
+        width: calc(100% - 250px);
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+}

@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title>Login Intranet Columbia</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
-		<link rel="stylesheet" href="css/login.css"> 
+		<link rel="stylesheet" href="css/login.css">
 	</head>
 	<body class="login">
 		<div class="main container-fluid h-100">
@@ -38,7 +40,7 @@
 								<label class="form-check-label">Recordar contraseña</label>
 							</div>
 							<div class="form-submit">
-								<button type="submit" class="btn btn-primary block-login__submit">Ingresar</button>
+								<button id="loginBtn" type="submit" value="main.html" class="btn btn-primary block-login__submit">Ingresar</button>
 								<br>
 								<a href="#">Olvidé mi contraseña</a>
 							</div>
@@ -48,6 +50,16 @@
 			</div>
 		</div>
 		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$('#loginBtn').click(function(e) {
+					e.preventDefault();
+					document.location.href = $(this).val();
+				});
+			});
+		</script>
 	</body>
 </html>
