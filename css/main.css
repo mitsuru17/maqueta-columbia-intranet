@@ -319,6 +319,10 @@ CONTENT STYLE
     margin-right: 0 !important;
 }
 
+.mainWrapper{
+    margin-top: 40px;
+}
+
 /* ---------------------------------------------------
 MEDIAQUERIES
 ----------------------------------------------------- */
