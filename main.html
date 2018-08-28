@@ -6,9 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Main Intranet Columbia</title>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
+
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
@@ -18,29 +23,31 @@
             <!-- Sidebar  -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <img src="img/logo-columbia.svg" alt="">
+                    <img class="main-logo" src="img/logo-columbia.svg" alt="">
+                    <img class="isotipo" src="img/isotipo-blanco.svg" alt="">
                 </div>
-                <ul class="list-unstyled components">
-                    <div class="profile-sidebar">
-                        <div class="profile-greeting">
-                                Bienvenida <strong>Andrea</strong>
+
+                <div class="profile-sidebar">
+                    <div class="profile-greeting">
+                        Bienvenida <strong>Andrea</strong>
+                    </div>
+                    <div class="profile-userpic">
+                        <img src="img/user/user.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            Andrea Montenegro Velez
                         </div>
-                        <div class="profile-userpic">
-                            <img src="img/user/user.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="profile-usertitle">
-                            <div class="profile-usertitle-name">
-                                Andrea Montenegro Velez
-                            </div>
-                            <div class="profile-usertitle-career">
-                                Aviación Comercial
-                            </div>
-                        </div>
-                        <div class="profile-userbuttons">
-                            <button type="button" class="btn btn-sm">Mi Perfil</button>
+                        <div class="profile-usertitle-career">
+                            Aviación Comercial
                         </div>
                     </div>
-                    
+                    <div class="profile-userbuttons">
+                        <button type="button" class="btn btn-sm">Mi Perfil</button>
+                    </div>
+                </div>
+
+                <ul id="menuExpanded" class="list-unstyled components">
                     <li class="active">
                         <a href="#">Inicio</a>
                     </li>
@@ -118,10 +125,102 @@
                         <a href="#">Correo</a>
                     </li>
                 </ul>
+                
+                <ul id="menuCollapsed" class="sf-menu sf-vertical">
+                    <li>
+                        <a href="#">
+                            <img src="img/menu/inicio.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="img/menu/academico.svg" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="https://superfish.joelbirch.co/examples/vertical/">Académico 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Académico 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Académico 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="img/menu/horario.svg" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Horarios 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Horarios 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Horarios 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="img/menu/pagos.svg" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Pagos 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Pagos 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Pagos 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="img/menu/tramites.svg" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Trámites 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Trámites 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Trámites 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="img/menu/descargas.svg" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Descargas 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Descargas 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Descargas 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="email-link">
+                        <a href="#">Correo</a>
+                    </li>
+                </ul>
             </nav>
 
             <div id="content">
-                <div class="toolbar position-fixed">
+                <!-- <div class="toolbar position-fixed"> -->
+                <div class="toolbar">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
@@ -144,6 +243,95 @@
                     </div>
                 </div>
                 <div class="row mainWrapper">
+                    <div class="owl-carousel">
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                      <div> Your Content </div>
+                  </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="col-md-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
                     <div class="col-md-12">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -155,21 +343,56 @@
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendor/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendor/superfish/js/hoverIntent.js"></script>
+        <script src="vendor/superfish/js/superfish.js"></script>
+        <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+        
         <script type="text/javascript">
             $(document).ready(function () {
+                // $("#sidebar").mCustomScrollbar({
+                //     theme: "minimal-dark"
+                // });
+
+                // $('#sidebarCollapse').on('click', function () {
+                //     $('#sidebar, #content').toggleClass('active');
+                //     $('.collapse.in').toggleClass('in');
+                //     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                // });
+
+                // $('#sidebarCollapse').on('click', function () {
+                //     $('#sidebar').toggleClass('active');
+                // });
+
+                $('ul.sf-menu').superfish({
+                    animation: {height:'show'}, // slide-down effect without fade-in
+                    delay:       1200,           // 1.2 second delay on mouseout
+                    cssArrows:     false
+                });
+
                 $("#sidebar").mCustomScrollbar({
                     theme: "minimal-dark"
                 });
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+
+                $(".owl-carousel").owlCarousel();
+                    
+                $("#sidebarCollapse").click(function(e){
+                    e.preventDefault();
+                    $('#sidebar').toggleClass('active');
+                    el = $("#sidebar");
+
+                    if(el.hasClass("mCS_disabled")){
+                        el.mCustomScrollbar("update");
+                    }else{
+                        el.mCustomScrollbar("disable",true);
+                    }
                 });
             });
         </script>
+        
     </body>
 </html>
