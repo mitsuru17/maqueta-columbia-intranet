@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main Intranet Columbia</title>
+
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="profesor">
+        <!-- <div class="wrapper"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <img class="main-logo" src="img/logo-columbia.svg" alt="">
+                        <img class="isotipo" src="img/isotipo-blanco.svg" alt="">
+                    </div>
+
+                    <div class="profile-sidebar">
+                        <div class="profile-greeting">
+                            Bienvenido <strong>Prosor</strong>
+                        </div>
+                        <div class="profile-userpic">
+                            <img src="img/profesor/prosor.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Rodrigo Haro Vidal
+                            </div>
+                            <div class="profile-usertitle-career">
+                                Lic. de Economia Financiera
+                            </div>
+                        </div>
+                        <div class="profile-userbuttons">
+                            <button type="button" class="btn btn-sm">Mi Perfil</button>
+                        </div>
+                    </div>
+
+                    <ul id="menuExpanded" class="list-unstyled components">
+                        <li class="active">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="cursos">
+                            <a href="#">Cursos</a>
+                        </li>
+                        <li class="notas">
+                            <a href="#">Notas</a>
+                        </li>
+                        <li class="horarios">
+                            <a href="#horariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Horarios</a>
+                            <ul class="collapse list-unstyled" id="horariosSubmenu">
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                    </ul>
+                    
+                    <ul id="menuCollapsed" class="sf-menu sf-vertical">
+                        <li>
+                            <a href="#">
+                                <img src="img/menu/inicio.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/academico.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="https://superfish.joelbirch.co/examples/vertical/">Académico 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/horario.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/pagos.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Pagos 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/tramites.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Trámites 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/descargas.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Descargas 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="content">
+                    <div class="toolbar">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="button_container" id="sidebarCollapse">
+                                        <span class="top"></span>
+                                        <span class="middle"></span>
+                                        <span class="bottom"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 align-self-center">
+                                    <div class="buttons-top">
+                                        <a href="#" class="notif"> </a>
+                                        <a href="#" class="logout"> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mainWrapper">
+                        <div class="col-md-12 p-0">
+                            <img src="img/slider/profesor1.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="col-md-12 my-4 text-center">
+                                <div class="main-title"><strong>Clases</strong> | Programadas</div>
+                            </div>
+                        </div>
+                        <div class="container-fluid p-0">
+                            <div class="fullwidth-title">
+                                <div class="col-md-10 offset-md-1">
+                                    <div class="col-md-6 curso">Curso | Ingles I</div>
+                                    <div class="col-md-6 grupo">GRUPO: GOLD6B-17</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-md-6">Inicio</div>
+                                        <div class="col-md-6">26/06/2018</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">Evaluación</div>
+                                        <div class="col-md-6">TIPO A</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">Inscritos:</div>
+                                        <div class="col-md-6">20</div>
+                                    </div>
+                                </div>
+                                <div class="col"><div class="row">
+                                    <div class="col-md-6">Programa:</div>
+                                    <div class="col-md-6">Aviación Comercial</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Sede:</div>
+                                    <div class="col-md-6">San Isidro</div>
+                                </div>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-12 tab-wrapper">
+                                    <ul id="controlAlumnos" class="nav nav-tabs left" role="tablist">
+                                        <li class="nav-item tab active">
+                                            <a class="nav-link" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+                                        </li>
+                                        <li class="nav-item tab">
+                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-expanded="false">Profile</a>
+                                        </li>
+                                        <li class="nav-item tab">
+                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content main">
+                                        <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+                                        <div class="tab-pane" id="profile" role="tabpanel" aria-expanded="false">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+                                        <div class="tab-pane" id="messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="vendor/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendor/superfish/js/hoverIntent.js"></script>
+        <script src="vendor/superfish/js/superfish.js"></script>
+        <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
+        <!-- <script src="js/custom.js"></script> -->
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('ul.sf-menu').superfish({
+                    animation: {height:'show'}, // slide-down effect without fade-in
+                    delay:       1200,           // 1.2 second delay on mouseout
+                    cssArrows:     false
+                });
+
+                $("#sidebar, .mainWrapper").mCustomScrollbar({
+                    theme: "minimal-dark"
+                });
+
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    items:1,
+                    loop:true,
+                    margin:10,
+                    autoplay:true,
+                    autoplayTimeout:5000
+                });
+
+                $("#sidebarCollapse").click(function(e){
+                    e.preventDefault();
+
+                    $('#sidebar, #content').toggleClass('active');
+
+                    setTimeout(reloadSlider, 200);
+
+                    var el = $("#sidebar");
+                    var content = $("#content");
+
+                    if(el.hasClass("mCS_disabled")){
+                        el.mCustomScrollbar("update");
+                    }else{
+                        el.mCustomScrollbar("disable",true);
+                    }
+                });
+
+                function reloadSlider(){
+                    var owl = $('.owl-carousel');
+                    owl.trigger('refresh.owl.carousel');
+                }
+
+                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                    var el = $(this);
+                    if(el.hasClass("show")){
+                        el.parent().addClass('selected');
+                    }else{
+                        el.parent().removeClass('selected');
+                    }
+                    console.log(el);
+                })
+
+            });
+        </script>
+        
+    </body>
+</html>

@@ -14,13 +14,10 @@
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
 
         <link rel="stylesheet" href="css/main.css">
-
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
     </head>
     <body>
         <div class="wrapper">
-            <!-- Sidebar  -->
+
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <img class="main-logo" src="img/logo-columbia.svg" alt="">
@@ -219,14 +216,10 @@
             </nav>
 
             <div id="content">
-                <!-- <div class="toolbar position-fixed"> -->
                 <div class="toolbar">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                    <i class="fas fa-align-center"></i>
-                                </button> -->
                                 <div class="button_container" id="sidebarCollapse">
                                     <span class="top"></span>
                                     <span class="middle"></span>
@@ -243,15 +236,14 @@
                     </div>
                 </div>
                 <div class="row mainWrapper">
-                    <div class="owl-carousel">
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                      <div> Your Content </div>
-                  </div>
+                    <div class="col-md-12" style="padding: 0;">
+                        <div class="mainslider owl-carousel">
+                            <div><img src="img/slider/slide1.jpg" alt=""></div>
+                            <div><img src="img/slider/slide2.jpg" alt=""></div>
+                            <div><img src="img/slider/slide3.jpg" alt=""></div>
+                            <div><img src="img/slider/slide4.jpg" alt=""></div>
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -350,40 +342,39 @@
         <script src="vendor/superfish/js/hoverIntent.js"></script>
         <script src="vendor/superfish/js/superfish.js"></script>
         <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
-        <script src="js/custom.js"></script>
+        <!-- <script src="js/custom.js"></script> -->
         
         <script type="text/javascript">
             $(document).ready(function () {
-                // $("#sidebar").mCustomScrollbar({
-                //     theme: "minimal-dark"
-                // });
-
-                // $('#sidebarCollapse').on('click', function () {
-                //     $('#sidebar, #content').toggleClass('active');
-                //     $('.collapse.in').toggleClass('in');
-                //     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                // });
-
-                // $('#sidebarCollapse').on('click', function () {
-                //     $('#sidebar').toggleClass('active');
-                // });
-
                 $('ul.sf-menu').superfish({
                     animation: {height:'show'}, // slide-down effect without fade-in
                     delay:       1200,           // 1.2 second delay on mouseout
                     cssArrows:     false
                 });
 
-                $("#sidebar").mCustomScrollbar({
+                $("#sidebar, .mainWrapper").mCustomScrollbar({
                     theme: "minimal-dark"
                 });
 
-                $(".owl-carousel").owlCarousel();
-                    
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    items:1,
+                    loop:true,
+                    margin:10,
+                    autoplay:true,
+                    autoplayTimeout:5000
+                });
+
+                // $('#sidebarCollapse').on('click', function () {
                 $("#sidebarCollapse").click(function(e){
                     e.preventDefault();
-                    $('#sidebar').toggleClass('active');
-                    el = $("#sidebar");
+
+                    $('#sidebar, #content').toggleClass('active');
+
+                    setTimeout(reloadSlider, 200);
+
+                    var el = $("#sidebar");
+                    var content = $("#content");
 
                     if(el.hasClass("mCS_disabled")){
                         el.mCustomScrollbar("update");
@@ -391,6 +382,11 @@
                         el.mCustomScrollbar("disable",true);
                     }
                 });
+
+                function reloadSlider(){
+                    var owl = $('.owl-carousel');
+                    owl.trigger('refresh.owl.carousel');
+                }
             });
         </script>
         
