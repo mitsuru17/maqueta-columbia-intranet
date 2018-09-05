@@ -43,11 +43,6 @@
             dateFormat: "Y-m-d H:i",
         });
 
-        $('ul#controlAlumnos > a').on('click', function(e) {
-            e.preventDefault();
-            $(this).tab('show');
-            console.log($(this));
-        })
 });
 
     function reloadSlider() {
