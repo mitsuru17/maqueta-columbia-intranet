@@ -10,7 +10,7 @@
             cssArrows: false
         });
 
-        $("#sidebar, .mainWrapper").mCustomScrollbar({
+        $("#sidebar, .mainWrapper, #avanceContainer").mCustomScrollbar({
             theme: "minimal-dark"
         });
 

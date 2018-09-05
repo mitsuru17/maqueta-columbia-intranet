@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main Intranet Columbia</title>
+
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs-min.css"> -->
+        <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs.css">
+        <link rel="stylesheet" href="vendor/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="profesor">
+        <!-- <div class="wrapper"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <img class="main-logo" src="img/logo-columbia.svg" alt="">
+                        <img class="isotipo" src="img/isotipo-blanco.svg" alt="">
+                    </div>
+
+                    <div class="profile-sidebar">
+                        <div class="profile-greeting">
+                            Bienvenido <strong>Prosor</strong>
+                        </div>
+                        <div class="profile-userpic">
+                            <img src="img/profesor/prosor.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Rodrigo Haro Vidal
+                            </div>
+                            <div class="profile-usertitle-career">
+                                Lic. de Economia Financiera
+                            </div>
+                        </div>
+                        <div class="profile-userbuttons">
+                            <button type="button" class="btn btn-sm">Mi Perfil</button>
+                        </div>
+                    </div>
+
+                    <ul id="menuExpanded" class="list-unstyled components">
+                        <li class="active">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="cursos">
+                            <a href="#">Cursos</a>
+                        </li>
+                        <li class="notas">
+                            <a href="#">Notas</a>
+                        </li>
+                        <li class="horarios">
+                            <a href="#horariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Horarios</a>
+                            <ul class="collapse list-unstyled" id="horariosSubmenu">
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                    </ul>
+                    
+                    <ul id="menuCollapsed" class="sf-menu sf-vertical">
+                        <li>
+                            <a href="#">
+                                <img src="img/menu/inicio.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/academico.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="https://superfish.joelbirch.co/examples/vertical/">Académico 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/horario.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/pagos.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Pagos 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/tramites.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Trámites 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/descargas.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Descargas 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="content">
+                    <div class="toolbar">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="button_container" id="sidebarCollapse">
+                                        <span class="top"></span>
+                                        <span class="middle"></span>
+                                        <span class="bottom"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 align-self-center">
+                                    <div class="buttons-top">
+                                        <a href="#" class="notif"> </a>
+                                        <a href="#" class="logout"> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mainWrapper">
+                        <div class="col-md-12 p-0">
+                            <img src="img/slider/profesor1.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="col-md-12 my-4 text-center">
+                                <div class="main-title"><strong>Clases</strong> | Programadas</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 tab-wrapper" id="erTab">
+                                    <ul id="controlAlumnos" class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="hoy-tab" data-toggle="tab" href="#hoy" role="tab" aria-controls="hoy" aria-selected="true">Hoy</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="todos-tab" data-toggle="tab" href="#todos" role="tab" aria-controls="todos" aria-selected="false">Todos</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content main main-cursos">
+                                        <div class="tab-pane show active" id="hoy" role="tabpanel" aria-labelledby="hoy-tab">
+                                            <div class="main-container table-container">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12 d-contents cursos-cards">
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 ingles">Inglés I</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO4C-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 portugues">Portugués</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO7B-16</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 1:00 pm. a 3:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>102</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 chino">Chino</h6>
+                                                                        <div class="card-codigocurso mb-2">EXCEL4D-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 4:00 pm. a 5:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Los Olivos</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>205</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="todos" role="tabpanel" aria-labelledby="todos-tab">
+                                            <div class="main-container table-container">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12 d-contents cursos-cards">
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 ingles">Inglés I</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO4C-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 portugues">Portugués</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO7B-16</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 1:00 pm. a 3:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>102</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 chino">Chino</h6>
+                                                                        <div class="card-codigocurso mb-2">EXCEL4D-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 4:00 pm. a 5:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Los Olivos</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>205</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 ingles">Inglés I</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO4C-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 portugues">Portugués</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO7B-16</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 1:00 pm. a 3:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>102</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 chino">Chino</h6>
+                                                                        <div class="card-codigocurso mb-2">EXCEL4D-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 4:00 pm. a 5:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Los Olivos</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>205</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 ingles">Inglés I</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO4C-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 portugues">Portugués</h6>
+                                                                        <div class="card-codigocurso mb-2">GOLDLO7B-16</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 1:00 pm. a 3:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Lince</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>102</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Curso:</h5>
+                                                                        <h6 class="card-subtitle mb-2 chino">Chino</h6>
+                                                                        <div class="card-codigocurso mb-2">EXCEL4D-17</div>
+                                                                        <div class="card-horario">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 4:00 pm. a 5:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-sede">
+                                                                            <strong>Sede:</strong>
+                                                                            <span>Los Olivos</span>
+                                                                        </div>
+                                                                        <div class="card-aula">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>205</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/inputs/js/inputs.js"></script>
+
+        <script src="vendor/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendor/superfish/js/hoverIntent.js"></script>
+        <script src="vendor/superfish/js/superfish.js"></script>
+        <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
+        <script src="vendor/flatpickr/flatpickr.js"></script>
+        <script src="js/custom.js"></script>        
+    </body>
+</html>

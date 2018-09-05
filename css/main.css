@@ -7,6 +7,11 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 .navbar { padding: 15px 10px; background: #fff; border: none; border-radius: 0; margin-bottom: 40px; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
 .navbar-btn { box-shadow: none; outline: none !important; border: none; }
 
+/*HELPERS*/
+.d-contents{
+    display: contents;
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -22,6 +27,7 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     height: 60px;
     z-index: 100;
     transition: all 0.3s;
+    border-bottom: 1px solid #ececec;
     padding: 0;
     margin: 0;
 }
@@ -446,6 +452,70 @@ CONTENT STYLE
 #btnAsistencia {
     width: 120px;
     margin-left: 20px;
+}
+#avanceContainer {
+    margin-top: 40px;
+    height: 300px;
+}
+
+/*CAMBIOS CURSOS*/
+#hoy .main-container, #todos .main-container{
+    margin-top: 30px;
+}
+
+.cursos-cards .card{
+    box-shadow: 2px 2px 8px #969696;
+    margin-bottom: 30px;
+}
+.cursos-cards .card-title{
+    font-weight: 600;
+}
+.cursos-cards .card-subtitle{
+    font-size: 1.25rem;
+}
+.cursos-cards .card-subtitle::after{
+    content: "";
+    width: 70px;
+    height: 5px;
+    margin-top: 10px;
+    background: #00c4a2;
+    border-radius: 8px;
+    display: block;
+}
+.cursos-cards .ingles::after{
+    background: #00c4a2;
+}
+.cursos-cards .portugues::after{
+    background: #f5a46f;
+}
+.cursos-cards .chino::after{
+    background: #4467db;
+}
+.cursos-cards .card-codigocurso{
+    font-weight: 600;
+    font-size: 14px;
+    color: #616161;
+    margin-bottom: 10px;
+}
+.cursos-cards .card-aula{
+    padding-bottom: 0 !important;
+}
+.cursos-cards .card-horario, .cursos-cards .card-sede, .cursos-cards .card-aula{
+    font-size: 13px;
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.cursos-cards .card-horario strong, .cursos-cards .card-sede strong, .cursos-cards .card-aula strong{
+    width: 30%;
+    font-weight: 600;
+}
+.cursos-cards .card-horario span, .cursos-cards .card-sede span, .cursos-cards .card-aula span{
+    width: 70%;
+}
+
+.main-cursos{
+    background: #f8f8f8 !important;
 }
 
 /*PROFESOR CUSTOM*/
