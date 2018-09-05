@@ -7,11 +7,14 @@
         <title>Main Intranet Columbia</title>
 
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs-min.css"> -->
+        <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs.css">
         <link rel="stylesheet" href="vendor/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
         <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
         <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
 
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -220,36 +223,1078 @@
                                         <div class="col-md-6">20</div>
                                     </div>
                                 </div>
-                                <div class="col"><div class="row">
-                                    <div class="col-md-6">Programa:</div>
-                                    <div class="col-md-6">Aviación Comercial</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">Sede:</div>
-                                    <div class="col-md-6">San Isidro</div>
-                                </div>
-                                <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-md-6">Programa:</div>
+                                        <div class="col-md-6">Aviación Comercial</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">Sede:</div>
+                                        <div class="col-md-6">San Isidro</div>
+                                    </div>
+                                    <div class="row">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                             <div class="row">
-                                <div class="col-md-12 tab-wrapper">
-                                    <ul id="controlAlumnos" class="nav nav-tabs left" role="tablist">
-                                        <li class="nav-item tab active">
-                                            <a class="nav-link" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+                                <div class="col-md-12 tab-wrapper" id="erTab">
+                                    <ul id="controlAlumnos" class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="alumnos-tab" data-toggle="tab" href="#alumnos" role="tab" aria-controls="home" aria-selected="true">Alumnos</a>
                                         </li>
-                                        <li class="nav-item tab">
-                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-expanded="false">Profile</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="asistencia-tab" data-toggle="tab" href="#asistencia" role="tab" aria-controls="asistencia" aria-selected="false">Asistencia</a>
                                         </li>
-                                        <li class="nav-item tab">
-                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="avance-tab" data-toggle="tab" href="#avance" role="tab" aria-controls="avance" aria-selected="false">Avance</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="material-tab" data-toggle="tab" href="#material" role="tab" aria-controls="material" aria-selected="false">Material</a>
                                         </li>
                                     </ul>
 
                                     <div class="tab-content main">
-                                        <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
-                                        <div class="tab-pane" id="profile" role="tabpanel" aria-expanded="false">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
-                                        <div class="tab-pane" id="messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium, nostrum, maxime numquam esse impedit molestiae sint cumque recusandae illum beatae dolore accusantium quibusdam nulla exercitationem! Minima unde enim iure.</div>
+                                        <div class="tab-pane show active" id="alumnos" role="tabpanel" aria-labelledby="alumnos-tab">
+                                            <div class="main-container table-container">
+                                                <div class="row p-4 pre-table">
+                                                    <div class="col-md-6">
+                                                        <a href="#">
+                                                            <img src="img/upload-ico.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="container">
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-success"> </span>
+                                                                    <span>M = Matriculado</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                    <span>R = Retirado</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Código</th>
+                                                            <th>Alumnos</th>
+                                                            <th class="text-center">Estado</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>CAMPOS DIAZ MARIFE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>FIESTAS FERNANDEZ ALISSON DANAHE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>GARCIA FLORES CINTHIA FRANCISNELL</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>HOLGUIN ARANDA OSCAR ANDRES</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>MACEDO AYALA MONICA DEL PILAR</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA BARBARAN MARIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA CERVANTES PATRICIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>QUISPE PANTOJA LESLI VANESSA</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SANTA MARIA BRENIS LESLY KIMBERLLINE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SCARAMUTTI ALVAREZ NICOLE BERENIZE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>ZUMAETA PAZ RUTH ENITH</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="asistencia" role="tabpanel" aria-labelledby="asistencia-tab">
+                                            <div class="main-container table-container">
+                                                <div class="row p-4 pre-table">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="input">
+                                                                    <input id="asistenciaDate" class="flatpickr flatpickr-input" type="text" placeholder="Hoy" readonly="readonly">
+                                                                    <label for="asistenciaDate">Fecha</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="input">
+                                                                    <input type="text" id="avance" placeholder="Ingrese el Avance del curso">
+                                                                    <label for="avance">Avance</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="container">
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-success"> </span>
+                                                                    <span>A = Asistió</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-warning"> </span>
+                                                                    <span>T = Tardanza</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                    <span>F = Faltó</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Código</th>
+                                                            <th>Alumnos</th>
+                                                            <th class="text-center">A</th>
+                                                            <th class="text-center">T</th>
+                                                            <th class="text-center">F</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>CAMPOS DIAZ MARIFE</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502195_A" name="asistencia_00301502195" checked>
+                                                                <label for="input_00301502195_A"> </label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502195_T" name="asistencia_00301502195">
+                                                                <label for="input_00301502195_T"> </label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502195_F" name="asistencia_00301502195">
+                                                                <label for="input_00301502195_F"> </label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502231</td>
+                                                            <td>FIESTAS FERNANDEZ ALISSON DANAHE</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502231_A" name="asistencia_00301502231">
+                                                                <label for="input_00301502231_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502231_T" name="asistencia_00301502231" checked>
+                                                                <label for="input_00301502231_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502231_F" name="asistencia_00301502231">
+                                                                <label for="input_00301502231_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502279</td>
+                                                            <td>GARCIA FLORES CINTHIA FRANCISNELL</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502279_A" name="asistencia_00301502279" checked>
+                                                                <label for="input_00301502279_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502279_T" name="asistencia_00301502279">
+                                                                <label for="input_00301502279_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502279_F" name="asistencia_00301502279">
+                                                                <label for="input_00301502279_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502165</td>
+                                                            <td>HOLGUIN ARANDA OSCAR ANDRES</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502165_A" name="asistencia_00301502165" checked>
+                                                                <label for="input_00301502165_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502165_T" name="asistencia_00301502165">
+                                                                <label for="input_00301502165_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502165_F" name="asistencia_00301502165">
+                                                                <label for="input_00301502165_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502310</td>
+                                                            <td>MACEDO AYALA MONICA DEL PILAR</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502310_A" name="asistencia_00301502310" checked>
+                                                                <label for="input_00301502310_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502310_T" name="asistencia_00301502310">
+                                                                <label for="input_00301502310_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502310_F" name="asistencia_00301502310">
+                                                                <label for="input_00301502310_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502234</td>
+                                                            <td>PADILLA BARBARAN MARIA BELEN</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502234_A" name="asistencia_00301502234">
+                                                                <label for="input_00301502234_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502234_T" name="asistencia_00301502234">
+                                                                <label for="input_00301502234_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502234_F" name="asistencia_00301502234" checked>
+                                                                <label for="input_00301502234_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502241</td>
+                                                            <td>PADILLA CERVANTES PATRICIA BELEN</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502241_A" name="asistencia_00301502241" checked>
+                                                                <label for="input_00301502241_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502241_T" name="asistencia_00301502241">
+                                                                <label for="input_00301502241_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502241_F" name="asistencia_00301502241">
+                                                                <label for="input_00301502241_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502246</td>
+                                                            <td>QUISPE PANTOJA LESLI VANESSA</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502246_A" name="asistencia_00301502246" checked>
+                                                                <label for="input_00301502246_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502246_T" name="asistencia_00301502246">
+                                                                <label for="input_00301502246_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502246_F" name="asistencia_00301502246">
+                                                                <label for="input_00301502246_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502184</td>
+                                                            <td>SANTA MARIA BRENIS LESLY KIMBERLLINE</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502184_A" name="asistencia_00301502184" checked>
+                                                                <label for="input_00301502184_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502184_T" name="asistencia_00301502184">
+                                                                <label for="input_00301502184_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502184_F" name="asistencia_00301502184">
+                                                                <label for="input_00301502184_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502289</td>
+                                                            <td>SCARAMUTTI ALVAREZ NICOLE BERENIZE</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502289_A" name="asistencia_00301502289">
+                                                                <label for="input_00301502289_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502289_T" name="asistencia_00301502289" checked>
+                                                                <label for="input_00301502289_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502289_F" name="asistencia_00301502289">
+                                                                <label for="input_00301502289_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502281</td>
+                                                            <td>ZUMAETA PAZ RUTH ENITH</td>
+                                                            <td class="text-center erRadio asistio">
+                                                                <input type="radio" id="input_00301502281_A" name="asistencia_00301502281" checked>
+                                                                <label for="input_00301502281_A"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio tardanza">
+                                                                <input type="radio" id="input_00301502281_T" name="asistencia_00301502281">
+                                                                <label for="input_00301502281_T"></label>
+                                                            </td>
+                                                            <td class="text-center erRadio falto">
+                                                                <input type="radio" id="input_00301502281_F" name="asistencia_00301502281">
+                                                                <label for="input_00301502281_F"></label>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="row">
+                                                    <div class="col-md-3 offset-md-9 d-flex justify-content-center">
+                                                        <button type="button" id="btnAsistencia" class="btn btn-primary">Guardar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="avance" role="tabpanel" aria-labelledby="avance-tab">
+                                            <div class="main-container table-container">
+                                                <div class="row p-4 pre-table">
+                                                    <div class="col-md-6">
+                                                        <a href="#">
+                                                            <img src="img/upload-ico.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="container">
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-success"> </span>
+                                                                    <span>M = AVANCE</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                    <span>R = AVANCE</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Código</th>
+                                                            <th>Alumnos</th>
+                                                            <th class="text-center">Estado</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>CAMPOS DIAZ MARIFE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>FIESTAS FERNANDEZ ALISSON DANAHE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>GARCIA FLORES CINTHIA FRANCISNELL</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>HOLGUIN ARANDA OSCAR ANDRES</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>MACEDO AYALA MONICA DEL PILAR</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA BARBARAN MARIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA CERVANTES PATRICIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>QUISPE PANTOJA LESLI VANESSA</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SANTA MARIA BRENIS LESLY KIMBERLLINE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SCARAMUTTI ALVAREZ NICOLE BERENIZE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>ZUMAETA PAZ RUTH ENITH</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="material" role="tabpanel" aria-labelledby="material-tab">
+                                            <div class="main-container table-container">
+                                                <div class="row p-4 pre-table">
+                                                    <div class="col-md-6">
+                                                        <a href="#">
+                                                            <img src="img/upload-ico.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="container">
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-success"> </span>
+                                                                    <span>M = MATERIAL</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-end">
+                                                                <div class="estado text-left">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                    <span>R = MATERIAL</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Código</th>
+                                                            <th>Alumnos</th>
+                                                            <th class="text-center">Estado</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>CAMPOS DIAZ MARIFE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>FIESTAS FERNANDEZ ALISSON DANAHE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>GARCIA FLORES CINTHIA FRANCISNELL</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>HOLGUIN ARANDA OSCAR ANDRES</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>MACEDO AYALA MONICA DEL PILAR</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA BARBARAN MARIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>PADILLA CERVANTES PATRICIA BELEN</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>QUISPE PANTOJA LESLI VANESSA</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SANTA MARIA BRENIS LESLY KIMBERLLINE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>SCARAMUTTI ALVAREZ NICOLE BERENIZE</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-danger"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="avatar">
+                                                                <div class="profile-userpic">
+                                                                    <img src="img/user/user.png" class="img-responsive mCS_img_loaded" alt="">
+                                                                </div>
+                                                            </td>
+                                                            <td>00301502195</td>
+                                                            <td>ZUMAETA PAZ RUTH ENITH</td>
+                                                            <td>
+                                                                <div class="estado text-center">
+                                                                    <span class="badge badge-success"> </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    <img src="img/email-ico.png" alt="">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -260,68 +1305,13 @@
         </div>
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/inputs/js/inputs.js"></script>
 
         <script src="vendor/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="vendor/superfish/js/hoverIntent.js"></script>
         <script src="vendor/superfish/js/superfish.js"></script>
         <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
-        <!-- <script src="js/custom.js"></script> -->
-        
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('ul.sf-menu').superfish({
-                    animation: {height:'show'}, // slide-down effect without fade-in
-                    delay:       1200,           // 1.2 second delay on mouseout
-                    cssArrows:     false
-                });
-
-                $("#sidebar, .mainWrapper").mCustomScrollbar({
-                    theme: "minimal-dark"
-                });
-
-                var owl = $('.owl-carousel');
-                owl.owlCarousel({
-                    items:1,
-                    loop:true,
-                    margin:10,
-                    autoplay:true,
-                    autoplayTimeout:5000
-                });
-
-                $("#sidebarCollapse").click(function(e){
-                    e.preventDefault();
-
-                    $('#sidebar, #content').toggleClass('active');
-
-                    setTimeout(reloadSlider, 200);
-
-                    var el = $("#sidebar");
-                    var content = $("#content");
-
-                    if(el.hasClass("mCS_disabled")){
-                        el.mCustomScrollbar("update");
-                    }else{
-                        el.mCustomScrollbar("disable",true);
-                    }
-                });
-
-                function reloadSlider(){
-                    var owl = $('.owl-carousel');
-                    owl.trigger('refresh.owl.carousel');
-                }
-
-                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                    var el = $(this);
-                    if(el.hasClass("show")){
-                        el.parent().addClass('selected');
-                    }else{
-                        el.parent().removeClass('selected');
-                    }
-                    console.log(el);
-                })
-
-            });
-        </script>
-        
+        <script src="vendor/flatpickr/flatpickr.js"></script>
+        <script src="js/custom.js"></script>        
     </body>
 </html>
