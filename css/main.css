@@ -51,7 +51,7 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 .button_container span { background: #999; border: none; height: 4px; width: 100%; position: absolute; top: 0; left: 0; -webkit-transition: all .35s ease; transition: all .35s ease; cursor: pointer; border-radius: 6px; }
 .button_container span:nth-of-type(2) { top: 8px; }
 .button_container span:nth-of-type(3) { top: 16px; }
-.buttons-top { text-align: right; }
+.buttons-top { text-align: right; position: absolute; right: 4%; }
 
 /*Buttons-top*/
 .notif { display: inline-block; background: url(../img/notificacion.svg); background-size: cover; background-repeat: no-repeat; width: 26px; height: 26px; }
@@ -87,7 +87,10 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 #sidebar ul p { color: #999; padding: 10px; }
 #sidebar ul li a { padding: 10px; font-size: 1.1em; display: block; }
 
-#menuExpanded { display: block; }
+#menuExpanded {
+    /*display: block;*/
+    height: calc(100vh - 314px);
+}
 #menuCollapsed {
     display: none;
     width: auto;
@@ -138,12 +141,12 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     #sidebar.active #menuCollapsed{
         display: block;
     }
-    #sidebar.active .mCSB_container{
+    /*#sidebar.active .mCSB_container{
         overflow: unset;
     }
     #sidebar.active .mCustomScrollBox{
         overflow: unset;
-    }
+    }*/
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -456,6 +459,7 @@ CONTENT STYLE
 #avanceContainer {
     margin-top: 40px;
     height: 300px;
+    overflow-y: scroll;
 }
 
 /*CAMBIOS CURSOS*/
@@ -517,6 +521,58 @@ CONTENT STYLE
 .main-cursos{
     background: #f8f8f8 !important;
 }
+
+/*CUSTOM FILE INPUT*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #01b0ab;
+    border-color: #01b0ab;
+    color: white;
+    font-weight: 100;
+}
+.btn-file:hover, .btn-file:active{
+    background-color: #028884 !important;
+    border-color: #026562 !important;
+}
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    /*filter: alpha(opacity=0);*/
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/*MATERIAL*/
+.file-ico {
+    width: 10%;
+    background-size: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.filedata { width: 80%; text-align: left;}
+.delete-ico { width: 10%; }
+
+.file-ico, .filedata, .delete-ico{
+    padding: 10px 0 !important;
+}
+
+.file-ico img { width: 42px; }
+.delete-ico img { width: 22px; }
+
+.pdf { background-image: url(../img/file-icos/pdf.png); }
+.doc { background-image: url(../img/file-icos/doc.png); }
+.ppt { background-image: url(../img/file-icos/ppt.png); }
+.xls { background-image: url(../img/file-icos/xls.png); }
+.jpg { background-image: url(../img/file-icos/jpg.png); }
 
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
