@@ -10,10 +10,6 @@
             cssArrows: false
         });
 
-        // $("#sidebar, .mainWrapper, #avanceContainer").mCustomScrollbar({
-        //     theme: "minimal-dark"
-        // });
-
         var owl = $('.owl-carousel');
         owl.owlCarousel({
             items: 1,
