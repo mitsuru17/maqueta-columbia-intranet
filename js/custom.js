@@ -31,7 +31,7 @@
             enableTime: true,
             dateFormat: "Y-m-d H:i",
         });
-});
+    });
     function reloadSlider() {
         var owl = $('.owl-carousel');
         owl.trigger('refresh.owl.carousel');

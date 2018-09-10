@@ -120,7 +120,6 @@ function naviClick(id, btn, weekNum, monthNum, yearNum) {
     createTimetable(jQuery('#' + id), btn, weekNum, monthNum, yearNum);
 }
 
-
 // Get timetables of day
 function getTimetables(tiva_timetables, day, month, year) {
     var timetables = [];
@@ -132,7 +131,6 @@ function getTimetables(tiva_timetables, day, month, year) {
     }
     return timetables;
 }
-
 
 // Get timetables of day
 function getTimetablesDay(tiva_timetables, day) {
@@ -231,6 +229,7 @@ function createTimetable(el, btn, weekNum, monthNum, yearNum) {
     // Create calendar
     var view = (typeof el.attr('data-view') != 'undefined') ? el.attr('data-view') : 'month';
 
+    // AQUI HACER EL CAMBIO A LISTA EN RESPONSIVE
     if (view == 'week') {
         timetableWeek(el, tiva_timetables, weekNum);
     } else if (view == 'list') {
@@ -272,8 +271,10 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         wordDay = new Array(wordDay_sun, wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri, wordDay_sat);
         dayArr = new Array("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday");
     } else { // Start with Monday
-        wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri, wordDay_sat, wordDay_sun);
-        dayArr = new Array("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday");
+        // wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri, wordDay_sat, wordDay_sun);
+        // dayArr = new Array("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday");
+        wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri);
+        dayArr = new Array("monday", "tuesday", "wednesday", "thursday", "friday");
     }
 
     var week_nav;
@@ -307,9 +308,28 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         tiva_timetables = getTimetablesWeek(tiva_timetables, new Date(firstWeekYear, firstWeekMonth - 1, firstWeekDate), new Date(lastWeekYear, lastWeekMonth - 1, lastWeekDate));
     }
 
-    // Get min, max time
-    var min_time = getMinTime(tiva_timetables) ? getMinTime(tiva_timetables) : 7;
-    var max_time = getMaxTime(tiva_timetables) ? getMaxTime(tiva_timetables) : 22;
+    // GET MIN TIME
+    // var min_time = getMinTime(tiva_timetables) ? getMinTime(tiva_timetables) : 7;
+    if (getMinTime(tiva_timetables) >= 7 ) {
+        var min_time = 7;
+    } else 
+    if (getMinTime(tiva_timetables) <= 7){
+        var min_time = getMinTime(tiva_timetables);
+    } else {
+       var min_time = 7; 
+    }
+
+    // GET MAX TIME
+    // var max_time = getMaxTime(tiva_timetables) ? getMaxTime(tiva_timetables) : 22;
+    if (getMaxTime(tiva_timetables) <= 22) {
+        var max_time = 22;
+    } else 
+    if (getMaxTime(tiva_timetables) >= 22){
+        var max_time = getMaxTime(tiva_timetables);
+    } else {
+        var max_time = 22; 
+    }
+    
     var show_time = (el.attr('data-header-time') == 'hide') ? '' : 'show-time';
 
     timetableString += '<div class="timetable-week ' + show_time + '">';
@@ -425,7 +445,19 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         timetableString += '<div class="timetable-column-grid">';
 
         for (var n = min_time; n < max_time; n++) {
-            timetableString += '<div class="grid-item ' + first + '"></div>';
+
+            var erDate = new Date(d);
+            var er_date = erDate.getDate();
+            var er_month = erDate.getMonth();
+            var er_year = erDate.getFullYear();
+
+            function pad(n) {
+                return n<10 ? '0'+n : n
+            }
+
+            var ddmmyyyy = pad(er_date) + "-" + pad(er_month + 1) + "-" + er_year;
+
+            timetableString += '<div class="grid-item ' + first + '" data-fecha="'+ ddmmyyyy +'" data-rango=""></div>';
         }
 
         timetableString += '</div>';
@@ -438,11 +470,11 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
     el.html(timetableString);
 
     // Popup
-    el.find('.timetable-title').magnificPopup({
-        type: 'inline',
-        removalDelay: 800,
-        mainClass: 'my-mfp-zoom-in'
-    });
+    // el.find('.timetable-title').magnificPopup({
+    //     type: 'inline',
+    //     removalDelay: 800,
+    //     mainClass: 'my-mfp-zoom-in'
+    // });
 }
 
 // Create timetable week
@@ -596,11 +628,11 @@ function timetableList(el, tiva_timetables, firstDayWeek) {
     el.html(timetableString);
 
     // Popup
-    el.find('.timetable-title').magnificPopup({
-        type: 'inline',
-        removalDelay: 800,
-        mainClass: 'my-mfp-zoom-in'
-    });
+    // el.find('.timetable-title').magnificPopup({
+    //     type: 'inline',
+    //     removalDelay: 800,
+    //     mainClass: 'my-mfp-zoom-in'
+    // });
 }
 
 // Create timetable month
@@ -732,11 +764,11 @@ function timetableMonth(el, tiva_timetables, firstDay, numbDays, monthNum, yearN
     el.html(timetableString);
 
     // Popup
-    el.find('.timetable-title').magnificPopup({
-        type: 'inline',
-        removalDelay: 800,
-        mainClass: 'my-mfp-zoom-in'
-    });
+    // el.find('.timetable-title').magnificPopup({
+    //     type: 'inline',
+    //     removalDelay: 800,
+    //     mainClass: 'my-mfp-zoom-in'
+    // });
 
     thisDate = 1;
 }
