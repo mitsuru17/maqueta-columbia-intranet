@@ -574,6 +574,37 @@ CONTENT STYLE
 .xls { background-image: url(../img/file-icos/xls.png); }
 .jpg { background-image: url(../img/file-icos/jpg.png); }
 
+/*TIMETABLE*/
+.timetable-title-wrap{
+    padding: 0 10px;
+    text-shadow: 1px 1px 3px #949494;
+}
+.curso, .aula, .sede{
+    font-size: 13px;
+}
+.aula, .sede{
+    width: 100%;
+    text-align: left;
+    line-height: 16px;
+}
+.aula div, .sede div{
+    display: inline-block;
+    width: 50%;
+}
+.aula-title, .sede-title{
+    font-weight: bold;
+}
+.curso-title{
+    width: 50%;
+    text-align: left;
+    line-height: 16px;
+}
+.timetable-curso{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
     background: #4c4c4c;

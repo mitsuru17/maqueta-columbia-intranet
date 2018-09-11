@@ -401,6 +401,7 @@
 
 .tiva-timetable .timetable-week .timetable-column .timetable-column-content .timetable-title {
 	box-shadow: 0 0 22px 0 rgba(0, 0, 0, .1);
+	border: 1px solid white;
 }
 
 .tiva-timetable .timetable-week .timetable-column .timetable-column-content, [class~=tiva-timetable] {
@@ -804,7 +805,7 @@
 }
 
 [class~=timetable-popup] [class~=popup-header][class~=color-1], .tiva-timetable .timetable-week .timetable-column .timetable-title.color-1, [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-1], [class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-1] {
-	background: #5fb3b3;
+	background: #00c1a4;
 }
 
 .timetable-popup {
@@ -848,7 +849,7 @@
 }
 
 [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-2], .tiva-timetable .timetable-week .timetable-column .timetable-title.color-2, [class~=timetable-popup] [class~=popup-header][class~=color-2] {
-	background: #69c;
+	background: #4467e5;
 }
 
 [class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-column-grid]  [class~=grid-item] {
@@ -880,7 +881,7 @@
 }
 
 [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-3], .timetable-popup .popup-header.color-3 {
-	color: #666;
+	color: #01a7fd;
 }
 
 [class~=tiva-timetable] [class~=timetable-month] [class~=today] [class~=calendar-daycounter] {
@@ -1032,7 +1033,7 @@
 }
 
 [class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-3], [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-3], [class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-title][class~=color-3] {
-	background: #f5d76a;
+	background: #01a7fd;
 }
 
 [class~=my-mfp-zoom-in][class~=mfp-bg] {
@@ -1051,9 +1052,9 @@
 	width: .072916667in;
 }
 
-[class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-title][class~=color-3], [class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-3] {
+/*[class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-title][class~=color-3], [class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-3] {
 	color: #666;
-}
+}*/
 
 [class~=my-mfp-zoom-in][class~=mfp-ready] [class~=zoom-anim-dialog] {
 	-ms-transform: scale(1);
@@ -1132,7 +1133,11 @@
 }
 
 [class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-4], [class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-title][class~=color-4], [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-4] {
-	background: #e78b6c;
+	background: #0038a5;
+}
+
+[class~=tiva-timetable] [class~=timetable-list] [class~=timetable-item] [class~=timetable-color][class~=color-5], [class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-title][class~=color-5], [class~=tiva-timetable] [class~=timetable-month] [class~=timetable-item] [class~=timetable-color][class~=color-5] {
+	background: #7be215;
 }
 
 .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {

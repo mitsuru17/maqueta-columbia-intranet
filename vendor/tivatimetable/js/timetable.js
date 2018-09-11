@@ -274,7 +274,7 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         // wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri, wordDay_sat, wordDay_sun);
         // dayArr = new Array("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday");
         wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri);
-        dayArr = new Array("monday", "tuesday", "wednesday", "thursday", "friday");
+        dayArr = new Array("lunes", "martes", "miercoles", "jueves", "viernes");
     }
 
     var week_nav;
@@ -292,14 +292,11 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
     }
 
     if (!(el.attr('data-nav') == 'hide') && !(el.attr('data-mode') == 'day')) {
-        timetableString += '<div class="time-navigation">'
-        +
-        '<span class="navi-icon navi-prev" onClick="naviClick(\'' + el.attr('id') + '\', \'prevwe\', \'' + firstWeek + '\', ' + firstWeekMonth + ', ' + firstWeekYear + ')">❮</span>'
-        +
-        '<span class="navi-time">' + week_nav + '</span>'
-        +
-        '<span class="navi-icon navi-next" onClick="naviClick(\'' + el.attr('id') + '\', \'nextwe\', \'' + firstWeek + '\', ' + firstWeekMonth + ', ' + firstWeekYear + ')">❯</span>'
-        +
+        timetableString += 
+        '<div class="time-navigation">'+
+            '<span class="navi-icon navi-prev" onClick="naviClick(\'' + el.attr('id') + '\', \'prevwe\', \'' + firstWeek + '\', ' + firstWeekMonth + ', ' + firstWeekYear + ')">❮</span>'+
+            '<span class="navi-time">' + week_nav + '</span>'+
+            '<span class="navi-icon navi-next" onClick="naviClick(\'' + el.attr('id') + '\', \'nextwe\', \'' + firstWeek + '\', ' + firstWeekMonth + ', ' + firstWeekYear + ')">❯</span>'+
         '</div>';
     }
 
@@ -402,38 +399,36 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
 
                 timetableString += '<div class="timetable-item">'
                 +
-                '<a class="timetable-title color-' + timetables[t].color + '" style="top:' + position + 'px; height:' + height + 'px; ' + item_width + item_left + '" href="#' + el.attr('id') + '-popup-' + timetables[t].id + '" class="open-popup-link">'
-                +
-                '<div class="timetable-title-wrap">'
-                +
-                '<div class="timetable-name">' + timetables[t].name + '</div>'
-                +
-                '<div class="timetable-time">' + timeTo12HrFormat(timetables[t].start_time) + ' - ' + timeTo12HrFormat(timetables[t].end_time) + '</div>'
-                +
-                '</div>'
-                +
-                '</a>'
-                +
-                '<div id="' + el.attr('id') + '-popup-' + timetables[t].id + '" class="timetable-popup zoom-anim-dialog mfp-hide">'
-                +
-                '<div class="popup-header color-' + timetables[t].color + '">'
-                +
-                timetables[t].name
-                    +
-                    '</div>'
-                +
-                '<div class="popup-body">'
-                +
-                timetable_image
-                    +
-                    '<div class="timetable-time color-' + timetables[t].color + '">' + timetables[t].start_time + timetable_end_time + '</div>'
-                +
-                '<div class="timetable-desc">' + timetables[t].description + '</div>'
-                +
-                '</div>'
-                +
-                '</div>'
-                +
+                // '<div class="timetable-title color-' + timetables[t].color + '" style="top:' + position + 'px; height:' + height + 'px; ' + item_width + item_left + '" href="#' + el.attr('id') + '-popup-' + timetables[t].id + '" class="open-popup-link">'+
+                '<div class="timetable-title color-' + timetables[t].color + '" style="top:' + position + 'px; height:' + height + 'px; ' + item_width + item_left + '" class="open-popup-link">'+
+                    '<div class="timetable-title-wrap">'+
+                        '<div class="curso">'+
+                            '<div class="curso-title">Curso:</div>'+
+                            '<div class="timetable-curso">' + timetables[t].curso + '</div>'+
+                        '</div>'+
+                        '<div class="aula">'+
+                            '<div class="aula-title">Aula:</div>'+
+                            '<div class="timetable-aula">' + timetables[t].aula + '</div>'+
+                        '</div>'+
+                        '<div class="sede">'+
+                            '<div class="sede-title">Sede:</div>'+
+                            '<div class="timetable-sede">' + timetables[t].sede + '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+                // '<div id="' + el.attr('id') + '-popup-' + timetables[t].id + '" class="timetable-popup zoom-anim-dialog mfp-hide">'+
+                    // '<div class="popup-header color-' + timetables[t].color + '">' + timetables[t].name + '</div>'+
+                // +
+                // '<div class="popup-body">'
+                // +
+                // timetable_image
+                //     +
+                //     '<div class="timetable-time color-' + timetables[t].color + '">' + timetables[t].start_time + timetable_end_time + '</div>'
+                // +
+                // '<div class="timetable-desc">' + timetables[t].description + '</div>'
+                // +
+                // '</div>'
+                // '</div>'+
                 '</div>';
             }
         }
