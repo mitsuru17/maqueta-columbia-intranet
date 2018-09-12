@@ -11,6 +11,9 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 .d-contents{
     display: contents;
 }
+.bolder{
+    font-weight: 700;
+}
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -603,6 +606,108 @@ CONTENT STYLE
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+/*REGISTRO DE DISPONIBILIDAD*/
+#disponibilidadDesde, #disponibilidadHasta{
+    margin: 0;
+    background: #f8f8f8;
+}
+.registro-legenda{
+    width: 160px;
+    padding: 4px 10px;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid gray;
+}
+.registro-legenda .badge{
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    border: 1px solid #cacaca;
+    border-radius: 0;
+}
+.registro-legenda .no-dispo{
+    background: transparent;
+}
+.registro-legenda .dispo{
+    background: #ff9400;
+}
+
+/*FANCY CARRUSEL NAV*/
+.fancy-carousel-nav { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; display: flex; align-items: center; }
+.arrowfancy {
+    position: absolute;
+    padding: 12px;
+    box-shadow: 1px -1px 0 1px #57585c inset;
+    -webkit-box-shadow: 2px -2px #57585c inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transition: 0.2s;
+    z-index: 98;
+}
+.arrowfancy:hover {
+    box-shadow: 3px -3px #29292b inset;
+    -webkit-box-shadow: 3px -3px #29292b inset;
+}
+.arrow-left {
+    transform: rotate(45deg);
+    left: 14px;
+}
+
+.arrow-right {
+    transform: rotate(225deg);
+    right: 16px;
+}
+
+/*INICIO*/
+.img-overlay-wrapper{
+    display: flex;
+}
+.img-overlay-wrapper div{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-overlay-wrapper .col-md-6:first-child{
+    background-image: url(../img/link-cursos.jpg);
+    margin-right: 10px;
+}
+.img-overlay-wrapper .col-md-6:last-child{
+    background-image: url(../img/link-notas.jpg);
+}
+#notifCarrusel .card{
+    background-position: right !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    padding: 60px 0;
+}
+.card-onomastico strong{
+    color: #0cc7aa;
+}
+.card-reuniones strong{
+    color: #00aaff;
+}
+.card-notas strong{
+    color: #5a6fda;
+}
+.card-onomastico, .card-reuniones, .card-notas{
+    display: flex;
+    margin-bottom: 16px;
+}
+.card-onomastico strong, .card-reuniones strong, .card-notas strong{
+    width: 20%;
+    font-weight: 600;
+}
+.card-onomastico span, .card-reuniones span, .card-notas span{
+    width: 80%;
 }
 
 /*PROFESOR CUSTOM*/

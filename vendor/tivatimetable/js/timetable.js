@@ -768,100 +768,100 @@ function timetableMonth(el, tiva_timetables, firstDay, numbDays, monthNum, yearN
     thisDate = 1;
 }
 
-jQuery(document).ready(function() {
-    jQuery('.tiva-timetable').each(function(index) {
+// jQuery(document).ready(function() {
+//     jQuery('.tiva-timetable').each(function(index) {
 
-        // Set id for timetable
-        jQuery(this).attr('id', 'timetable-' + (index + 1));
+//         // Set id for timetable
+//         jQuery(this).attr('id', 'timetable-' + (index + 1));
 
-        // Get timetables from json file or ajax php
-        var source = (typeof jQuery(this).attr('data-source') != 'undefined') ? jQuery(this).attr('data-source') : 'json';
-        var view = (typeof jQuery(this).attr('data-view') != 'undefined') ? jQuery(this).attr('data-view') : 'month';
+//         // Get timetables from json file or ajax php
+//         var source = (typeof jQuery(this).attr('data-source') != 'undefined') ? jQuery(this).attr('data-source') : 'json';
+//         var view = (typeof jQuery(this).attr('data-view') != 'undefined') ? jQuery(this).attr('data-view') : 'month';
 
-        if ((jQuery(this).attr('data-mode') == 'day') && ((view == 'week') || (view == 'list'))) {
-            var mode = 'day';
-        } else {
-            var mode = 'date';
-        }
+//         if ((jQuery(this).attr('data-mode') == 'day') && ((view == 'week') || (view == 'list'))) {
+//             var mode = 'day';
+//         } else {
+//             var mode = 'date';
+//         }
 
-        var timetable_contain = jQuery(this);
+//         var timetable_contain = jQuery(this);
 
-        if (source == 'json') { // Get timetables from json file
-            if (mode == 'day') {
-                var timetable_json = 'vendor/tivatimetable/timetables_day.json';
-            } else {
-                var timetable_json = 'vendor/tivatimetable/timetables_date.json';
-            }
+//         if (source == 'json') { // Get timetables from json file
+//             if (mode == 'day') {
+//                 var timetable_json = 'vendor/tivatimetable/timetables_day.json';
+//             } else {
+//                 var timetable_json = 'vendor/tivatimetable/timetables_date.json';
+//             }
 
-            jQuery.getJSON(timetable_json, function(data) {
+//             jQuery.getJSON(timetable_json, function(data) {
 
-                // Init timetables variable
-                tiva_timetables = [];
+//                 // Init timetables variable
+//                 tiva_timetables = [];
 
-                for (var i = 0; i < data.items.length; i++) {
-                    tiva_timetables.push(data.items[i]);
-                }
+//                 for (var i = 0; i < data.items.length; i++) {
+//                     tiva_timetables.push(data.items[i]);
+//                 }
 
-                // Sort timetables by date
-                tiva_timetables.sort(sortByTime);
+//                 // Sort timetables by date
+//                 tiva_timetables.sort(sortByTime);
 
-                for (var j = 0; j < tiva_timetables.length; j++) {
-                    tiva_timetables[j].id = j;
-                }
+//                 for (var j = 0; j < tiva_timetables.length; j++) {
+//                     tiva_timetables[j].id = j;
+//                 }
 
-                // Create timetable
-                var todayDate = new Date();
+//                 // Create timetable
+//                 var todayDate = new Date();
 
-                var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
+//                 var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
 
-                if (date_start == 'sunday') {
-                    var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay()));
-                } else {
-                    var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
-                }
+//                 if (date_start == 'sunday') {
+//                     var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay()));
+//                 } else {
+//                     var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
+//                 }
 
-                createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
+//                 createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
 
-            });
+//             });
 
-        } else { // Get timetables from php file via ajax : timetables/timetables.php
+//         } else { // Get timetables from php file via ajax : timetables/timetables.php
 
-            jQuery.ajax({
-                url: 'timetable/timetables.php',
-                dataType: 'json',
-                data: '',
-                beforeSend: function() {
-                    timetable_contain.html('<div class="loading"><img src="assets/images/loading.gif" /></div>');
-                },
+//             jQuery.ajax({
+//                 url: 'timetable/timetables.php',
+//                 dataType: 'json',
+//                 data: '',
+//                 beforeSend: function() {
+//                     timetable_contain.html('<div class="loading"><img src="assets/images/loading.gif" /></div>');
+//                 },
 
-                success: function(data) {
-                    // Init timetables variable
-                    tiva_timetables = [];
+//                 success: function(data) {
+//                     // Init timetables variable
+//                     tiva_timetables = [];
 
-                    for (var i = 0; i < data.length; i++) {
-                        tiva_timetables.push(data[i]);
-                    }
+//                     for (var i = 0; i < data.length; i++) {
+//                         tiva_timetables.push(data[i]);
+//                     }
 
-                    // Sort timetables by date
-                    tiva_timetables.sort(sortByTime);
+//                     // Sort timetables by date
+//                     tiva_timetables.sort(sortByTime);
 
-                    for (var j = 0; j < tiva_timetables.length; j++) {
-                        tiva_timetables[j].id = j;
-                    }
+//                     for (var j = 0; j < tiva_timetables.length; j++) {
+//                         tiva_timetables[j].id = j;
+//                     }
 
-                    // Create timetable
-                    var todayDate = new Date();
+//                     // Create timetable
+//                     var todayDate = new Date();
 
-                    var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
+//                     var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
 
-                    if (date_start == 'sunday') {
-                        var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay()));
-                    } else {
-                        var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
-                    }
-                    createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
-                }
-            });
-        }
-    });
-});
+//                     if (date_start == 'sunday') {
+//                         var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay()));
+//                     } else {
+//                         var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
+//                     }
+//                     createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
+//                 }
+//             });
+//         }
+//     });
+// });

@@ -197,14 +197,51 @@
                         </div>
                         <div class="container">
                             <div class="col-md-12 my-4 text-center">
-                                <div class="main-title"><strong>Horario</strong> | de clase</div>
+                                <div class="main-title"><strong>Registro</strong> | de disponibilidad</div>
                             </div>
                         </div>
 
                         <div class="container">
                             <div class="row">
+                                <div class="offset-md-2 col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="offset-md-2 col-md-3 bolder">Desde:</div>
+                                                <div class="col-md-5">
+                                                    <div class="input">
+                                                        <input type="text" id="disponibilidadDesde" class="flatpickr flatpickr-input" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="offset-md-2 col-md-3 bolder">Hasta:</div>
+                                                <div class="col-md-5">
+                                                    <div class="input">
+                                                        <input type="text" id="disponibilidadHasta" class="flatpickr flatpickr-input" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 d-flex justify-content-end">
+                                    <div class="registro-legenda">
+                                        <div><span class="badge no-dispo"> </span>No disponible</div>
+                                        <div><span class="badge dispo"> </span>Disponible</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12 tab-wrapper" id="erTab">
-                                    <div class="tiva-timetable" id="horarioDeClase" data-source="json" data-view="week" data-mode="day" data-start="monday" data-nav="hide"></div> 
+                                    <div class="tiva-timetable" id="registroDispo" data-view="week" data-mode="day" data-start="monday" data-nav="hide"></div> 
+                                    <div class="col-md-12 d-flex justify-content-end pr-0">
+                                        <button type="button" id="btnRegistroDispo" class="btn btn-primary">Guardar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
