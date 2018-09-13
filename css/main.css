@@ -729,8 +729,14 @@ CONTENT STYLE
 #registroNotas .card{
     text-align: center;
 }
+#registroNotas .card-sede{
+    margin: 0 auto;
+}
 #registroNotas .card-sede, #registroNotas .card-sede strong, #registroNotas .card-sede span{
     width: 50%;
+}
+#registroNotas .card-subtitle::after{
+    margin: 10px auto 0 !important;
 }
 
 /*PROFESOR CUSTOM*/
