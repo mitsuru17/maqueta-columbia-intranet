@@ -125,6 +125,14 @@
                 });
             });
         }
+
+
+        $(".tiva-timetable").each(function(index) {
+            var el = $(this);
+            var column = el.find("timetable-column");
+            var td = column.find("grid-item");
+        });
+
     });
 
     function reloadSlider() {

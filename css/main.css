@@ -91,8 +91,8 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 #sidebar ul li a { padding: 10px; font-size: 1.1em; display: block; }
 
 #menuExpanded {
-    /*display: block;*/
-    height: calc(100vh - 314px);
+    height: calc(100vh - 342px);
+    border-right: 1px solid #ececec;
 }
 #menuCollapsed {
     display: none;
@@ -124,6 +124,7 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     }
     #sidebar.active .profile-sidebar{
         background: transparent;
+        border: none;
     }
     #sidebar.active .profile-userpic img {
         max-width: calc(100% - 20px);
@@ -202,7 +203,11 @@ body.profesor li.horarios{border-left-color:#7be215;}
 }
 
 /*SIDEBAR USER PROFILE*/
-.profile-sidebar { padding: 10px 0 10px 0; margin: 14px 0; background: #fff; }
+.profile-sidebar {
+    padding: 24px 0;
+    background: #fff;
+    border-right: 1px solid #ececec;
+}
 .profile-greeting { text-align: center; margin-bottom: 10px; }
 .profile-greeting strong { font-weight: 700; }
 .profile-userpic { text-align: center; }
@@ -582,7 +587,7 @@ CONTENT STYLE
     padding: 0 10px;
     text-shadow: 1px 1px 3px #949494;
 }
-.curso, .aula, .sede{
+.timetable-title-wrap .curso, .timetable-title-wrap .aula, .timetable-title-wrap .sede{
     font-size: 13px;
 }
 .aula, .sede{
@@ -737,6 +742,67 @@ CONTENT STYLE
 }
 #registroNotas .card-subtitle::after{
     margin: 10px auto 0 !important;
+}
+
+/*PERFIL*/
+.perfil-title {
+    color: #003aa6;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.datos-perfil{
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.datos-perfil div{
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    border-top: 1px solid #ececec;
+}
+.datos-perfil strong{
+    font-weight: 600;
+}
+.datos-perfil strong, .datos-perfil span{
+    width: 50%;
+}
+
+.perfil-sidebar{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.perfil-sidebar img, .perfil-sidebar button{
+    width: 240px;
+}
+.perfil-sidebar button{
+    margin-top: 6px;
+    color: white;
+    font-size: 16px;
+}
+#cambiarFoto{
+    background: #f8c420;
+}
+#cambiarPassword{
+    background: #01b0ab;
+}
+
+/*NOTAS REGISTRO*/
+#notasRegistro thead th.text-center{
+    width: 48px;
+}
+#notasRegistro tbody > tr td:last-child{
+    margin: 0 auto;
+    text-align: center;
+}
+#notasRegistro tbody > tr td:last-child input{
+    width: 100%;
+    padding-left: 4px;
+}
+
+#notasRegistro tbody td.text-center{
+    border: 1px inset #cacaca;
 }
 
 /*PROFESOR CUSTOM*/

@@ -452,7 +452,7 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
 
             var ddmmyyyy = pad(er_date) + "-" + pad(er_month + 1) + "-" + er_year;
 
-            timetableString += '<div class="grid-item ' + first + '" data-fecha="'+ ddmmyyyy +'" data-rango=""></div>';
+            timetableString += '<div class="grid-item ' + first + '" data-fecha="'+ ddmmyyyy +'"></div>';
         }
 
         timetableString += '</div>';
