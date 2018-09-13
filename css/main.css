@@ -666,8 +666,9 @@ CONTENT STYLE
 .img-overlay-wrapper{
     display: flex;
 }
-.img-overlay-wrapper div{
+.img-overlay-wrapper a{
     display: flex;
+    width: 100%;
     height: 200px;
     justify-content: center;
     align-items: center;
@@ -676,19 +677,32 @@ CONTENT STYLE
     background-size: cover;
     background-repeat: no-repeat;
 }
-.img-overlay-wrapper .col-md-6:first-child{
+.img-overlay-wrapper a:first-child{
     background-image: url(../img/link-cursos.jpg);
     margin-right: 10px;
 }
-.img-overlay-wrapper .col-md-6:last-child{
+.img-overlay-wrapper a:last-child{
     background-image: url(../img/link-notas.jpg);
+}
+.img-overlay-wrapper div{
+    text-align: center;
 }
 #notifCarrusel .card{
     background-position: right !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
-    padding: 60px 0;
+    padding: 60px 20px;
 }
+#notifCarrusel .card-body{
+    width: 46%;
+}
+.arrow-notificaciones.arrow-left{
+    left: 54px !important;
+}
+.arrow-notificaciones.arrow-right{
+    right: 56px !important;
+}
+
 .card-onomastico strong{
     color: #0cc7aa;
 }
@@ -701,13 +715,22 @@ CONTENT STYLE
 .card-onomastico, .card-reuniones, .card-notas{
     display: flex;
     margin-bottom: 16px;
+    width: 100%;
 }
 .card-onomastico strong, .card-reuniones strong, .card-notas strong{
-    width: 20%;
+    width: 50%;
     font-weight: 600;
 }
 .card-onomastico span, .card-reuniones span, .card-notas span{
-    width: 80%;
+    width: 50%;
+    font-size: 12px;
+}
+/*REGISTRO NOTAS*/
+#registroNotas .card{
+    text-align: center;
+}
+#registroNotas .card-sede, #registroNotas .card-sede strong, #registroNotas .card-sede span{
+    width: 50%;
 }
 
 /*PROFESOR CUSTOM*/
