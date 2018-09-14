@@ -466,8 +466,8 @@ CONTENT STYLE
 }
 #avanceContainer {
     margin-top: 40px;
-    height: 300px;
-    overflow-y: scroll;
+    /*height: 300px;
+    overflow-y: scroll;*/
 }
 
 /*CAMBIOS CURSOS*/
@@ -639,6 +639,24 @@ CONTENT STYLE
 }
 .registro-legenda .dispo{
     background: #ff9400;
+}
+#registroDispo .grid-item.selected{
+    background: #ff9400;
+}
+#registroDispo .grid-item:hover {
+    border: 1px dashed #999999 !important;
+    cursor: pointer;
+}
+#registroDispo .timetable-column-header{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#registroDispo .timetable-column-header span{
+    display: none;
+}
+[class~=tiva-timetable] [class~=timetable-week] [class~=timetable-column] [class~=timetable-column-grid] [class~=grid-item] {
+    box-sizing: content-box;
 }
 
 /*FANCY CARRUSEL NAV*/

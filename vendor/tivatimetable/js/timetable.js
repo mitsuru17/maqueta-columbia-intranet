@@ -345,8 +345,8 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         var hour = (n < 10) ? '0' + n : n;
         var compositeHour = hour + ':00';
 
-        // timetableString += '<div class="axis-item">' + hour + ':00</div>';
-        timetableString += '<div class="axis-item">' + timeTo12HrFormat(compositeHour) + '</div>';
+        timetableString += '<div class="axis-item">' + hour + ':00</div>';
+        // timetableString += '<div class="axis-item">' + timeTo12HrFormat(compositeHour) + '</div>';
     }
 
     timetableString += '</div>';
@@ -354,7 +354,7 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
     timetableString += '<div class="timetable-columns">';
 
     for (var m = 0; m < wordDay.length; m++) {
-        // Caculate date of week
+        // Calculate date of week
         d = getDayAfter(firstWeek, m);
         date = d.getDate();
         month = d.getMonth() + 1;
@@ -453,16 +453,16 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
 
             var erDate = new Date(d);
             var er_date = erDate.getDate();
-            var er_month = erDate.getMonth();
-            var er_year = erDate.getFullYear();
+            // var er_month = erDate.getMonth();
+            // var er_year = erDate.getFullYear();
 
-            function pad(n) {
-                return n<10 ? '0'+n : n
-            }
+            // function pad(n) {
+            //     return n<10 ? '0'+n : n
+            // }
 
-            var ddmmyyyy = pad(er_date) + "-" + pad(er_month + 1) + "-" + er_year;
+            // var ddmmyyyy = pad(er_date) + "-" + pad(er_month + 1) + "-" + er_year;
 
-            timetableString += '<div class="grid-item ' + first + '" data-fecha="'+ ddmmyyyy +'"></div>';
+            timetableString += '<div class="grid-item ' + first + '" data-dia="'+ wordDay[m] +'"></div>';
         }
 
         timetableString += '</div>';

@@ -97,28 +97,36 @@
                     createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
 
                     var arrayRango = [];
+                    var arrayRangoAmPm = [];
 
                     var axisItems = timetable_contain.find(".timetable-axis > .axis-item");
-                    var gridItem = timetable_contain.find(".timetable-column-grid > .grid-item");
                     var gridColumn = timetable_contain.find(".timetable-column-grid");
 
                     $(axisItems).each(function() {
                         var axis = $(this).html();
                         arrayRango.push(axis);
                     });
-                    console.log(arrayRango);
+                    // console.log(arrayRango);
 
-                    $(gridColumn).each(function(c, item) {
+                    $(gridColumn).each(function(i, item) {
                         $(this).find(".grid-item").each(function(i, item2) {
-                            // $(arrayRango).each(function(i, item3) {
-                            //     $(item2).attr('data-rango', item3);
-                            // });
-                            $(item2).attr('data-rango', arrayRango[i]);
+                            $(item2).attr('data-rango', arrayRango[i] + '-' + arrayRango[i + 1]);
                         });
+                    });
+
+                    $(arrayRango).each(function(i, item) {
+                        var rangoAmPm = timeTo12HrFormat(item);
+                        arrayRangoAmPm.push(rangoAmPm);
+                    });
+                    // console.log(arrayRangoAmPm);
+
+                    $(axisItems).each(function(i, item) {
+                        $(item).html(arrayRangoAmPm[i]);
                     });
 
                 });
             });
+            er_gridItem();
         }
         if (horarioDeClase) {
             $('#horarioDeClase').each(function() {
@@ -153,4 +161,12 @@
         var owl = $('.owl-carousel');
         owl.trigger('refresh.owl.carousel');
     }
+
+    function er_gridItem() {
+        $("#registroDispo").on("click", ".grid-item", function() {
+            $(this).toggleClass("selected");
+            console.log( $(this).data("dia") + ',' + $(this).data("rango") );
+        });
+    }
+
 })(jQuery);
