@@ -72,7 +72,7 @@
         var registroDispo = $(".tiva-timetable").has("#registroDispo");
         var horarioDeClase = $(".tiva-timetable").has("#horarioDeClase");
         if (registroDispo) {
-            $('#registroDispo').each(function(index) {
+            $('#registroDispo').each(function() {
                 var mode = 'day';
                 var timetable_contain = $(this);
                 var timetable_json = 'vendor/tivatimetable/empty.json';
@@ -95,11 +95,33 @@
                     var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
                     var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
                     createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
+
+                    var arrayRango = [];
+
+                    var axisItems = timetable_contain.find(".timetable-axis > .axis-item");
+                    var gridItem = timetable_contain.find(".timetable-column-grid > .grid-item");
+                    var gridColumn = timetable_contain.find(".timetable-column-grid");
+
+                    $(axisItems).each(function() {
+                        var axis = $(this).html();
+                        arrayRango.push(axis);
+                    });
+                    console.log(arrayRango);
+
+                    $(gridColumn).each(function(c, item) {
+                        $(this).find(".grid-item").each(function(i, item2) {
+                            // $(arrayRango).each(function(i, item3) {
+                            //     $(item2).attr('data-rango', item3);
+                            // });
+                            $(item2).attr('data-rango', arrayRango[i]);
+                        });
+                    });
+
                 });
             });
         }
         if (horarioDeClase) {
-            $('#horarioDeClase').each(function(index) {
+            $('#horarioDeClase').each(function() {
                 var mode = 'day';
                 var timetable_contain = $(this);
                 var timetable_json = 'vendor/tivatimetable/timetables_day.json';
@@ -125,14 +147,6 @@
                 });
             });
         }
-
-
-        $(".tiva-timetable").each(function(index) {
-            var el = $(this);
-            var column = el.find("timetable-column");
-            var td = column.find("grid-item");
-        });
-
     });
 
     function reloadSlider() {
