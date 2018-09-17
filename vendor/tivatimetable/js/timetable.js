@@ -327,15 +327,6 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         var max_time = 22; 
     }
 
-    var datarango = [];
-    for (var n = min_time; n <= max_time; n++) {
-        var hour = (n < 10) ? '0' + n : n;
-        var compositeHour = hour + ':00';
-
-        datarango.push(compositeHour);
-    }
-    // console.log(datarango);
-    
     var show_time = (el.attr('data-header-time') == 'hide') ? '' : 'show-time';
 
     timetableString += '<div class="timetable-week ' + show_time + '">';
@@ -468,10 +459,6 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
         timetableString += '</div>';
         timetableString += '</div>';
     }
-
-    // for (var i = 0; i < datarango.length; i++) {
-    //     console.log(datarango[i])
-    // }
 
     timetableString += '</div>';
     timetableString += '</div>';
