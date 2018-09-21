@@ -7,13 +7,15 @@
         <title>Main Intranet Columbia</title>
 
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs-min.css"> -->
+        <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs.css">
         <link rel="stylesheet" href="vendor/simplebar/simplebar.css">
         <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
         <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
-        <link rel="stylesheet" href="vendor/simplebar/simplebar.css">
+        <link rel="stylesheet" href="vendor/tivatimetable/css/timetable.css">
 
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -38,7 +40,7 @@
                                 Andrea Montenegro Velez
                             </div>
                             <div class="profile-usertitle-career">
-                                Aviación Comercial
+                                AVIACIÓN COMERCIAL
                             </div>
                         </div>
                         <div class="profile-userbuttons">
@@ -123,6 +125,12 @@
                         <li class="email-link">
                             <a href="#">Correo</a>
                         </li>
+                        <li class="reglamento-link">
+                            <a href="#">Reglamento</a>
+                        </li>
+                        <li class="encuesta-link">
+                            <a href="#">Encuesta</a>
+                        </li>
                     </ul>
                     
                     <ul id="menuCollapsed" class="sf-menu sf-vertical">
@@ -137,7 +145,7 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="https://superfish.joelbirch.co/examples/vertical/">Académico 1</a>
+                                    <a href="#">Académico 1</a>
                                 </li>
                                 <li>
                                     <a href="#">Académico 2</a>
@@ -211,9 +219,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="email-link">
+                        <!-- <li class="email-link">
                             <a href="#">Correo</a>
                         </li>
+                        <li class="reglamento-link">
+                            <a href="#">Reglamento</a>
+                        </li> -->
                     </ul>
                 </nav>
 
@@ -228,7 +239,7 @@
                                         <span class="bottom"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-6 align-self-center">
+                                <div class="col-md-6">
                                     <div class="buttons-top">
                                         <a href="#" class="notif"> </a>
                                         <a href="#" class="logout"> </a>
@@ -237,8 +248,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mainWrapper">
-                        <div class="col-md-12" style="padding: 0;">
+
+                    <div class="mainWrapper">
+                        <div class="col-md-12 p-0">
                             <div id="headerSlider" class="mainslider owl-carousel">
                                 <div><img src="img/slider/slide1.jpg" alt=""></div>
                                 <div><img src="img/slider/slide2.jpg" alt=""></div>
@@ -246,93 +258,95 @@
                                 <div><img src="img/slider/slide4.jpg" alt=""></div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="container">
+                            <div class="col-md-12 my-4 text-center">
+                                <div class="main-title"><strong>Mi</strong> | Horario</div>
+                            </div>
                         </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 tab-wrapper m-0" id="erTab">
+                                    <div class="main main-cursos">
+                                        <div class="main-container table-container">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="tiva-timetable" id="horarioPersonal" data-source="json" data-view="week" data-mode="day" data-start="monday" data-nav="hide"></div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-1 col-md-10 d-flex">
+                                    <div class="container">
+                                        <div class="img-overlay-wrapper">
+                                            <a href="#">
+                                                <div class="col-md-4">
+                                                    Notas
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="col-md-4">
+                                                    Cursos
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="col-md-4">
+                                                    Asistencia
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="container mt-5">
+                            <div class="col-md-12 my-4 text-center">
+                                <div class="main-title"><strong>Últimas</strong> | Novedades</div>
+                            </div>
                         </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                        <div class="col-md-12">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="container my-5 px-4" style="position: relative;">
+                            <div class="row">
+                                <div class="fancy-carousel-nav" style="height: 290px;">
+                                    <a class="arrowfancy arrow-books arrow-left" title="Previous" href="javascript:;"></a>
+                                    <a class="arrowfancy arrow-books arrow-right" title="Next" href="javascript:;"></a>
+                                </div>
+                                <div class="col-md-12 owl-carousel" id="booksCarrusel">
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="book">
+                                        <a href="#">
+                                            <img src="img/descargas/libro-6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -340,12 +354,13 @@
         </div>
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/inputs/js/inputs.js"></script>
         <script src="vendor/simplebar/simplebar.js"></script>
         <script src="vendor/superfish/js/hoverIntent.js"></script>
         <script src="vendor/superfish/js/superfish.js"></script>
         <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
         <script src="vendor/flatpickr/flatpickr.js"></script>
-        <script src="vendor/simplebar/simplebar.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="vendor/tivatimetable/js/timetable.js"></script>
+        <script src="js/custom.js"></script>        
     </body>
 </html>

@@ -49,6 +49,33 @@
             notifCarrusel.trigger('next.owl.carousel');
         });
 
+        // Books Carrusel
+        var booksCarrusel = $('#booksCarrusel');
+        booksCarrusel.on('initialized.owl.carousel', function(event) {
+            var that = $(this);
+            var stage = that.find(".owl-stage");
+            var actives = stage.find(".owl-item.active");
+
+            var active1 = actives[0];
+            var active2 = actives[1];
+            console.log(active1);
+            // $(active1).attr("style", "margin-right: 0 !important;");
+            // $(active1).find("img").attr("style", "zoom: .75;width: auto;");
+
+            // $(active2).find("img").attr("style", "zoom: .87;width: auto;");
+        });
+        booksCarrusel.owlCarousel({
+            items: 5,
+            margin: 20,
+            loop: true
+        });
+        $('.arrow-books.arrow-left').click(function() {
+            booksCarrusel.trigger('prev.owl.carousel');
+        });
+        $('.arrow-books.arrow-right').click(function() {
+            booksCarrusel.trigger('next.owl.carousel');
+        });
+
         new SimpleBar($('#menuExpanded')[0]);
         new SimpleBar($('.mainWrapper')[0]);
 
@@ -71,6 +98,7 @@
 
         var registroDispo = $(".tiva-timetable").has("#registroDispo");
         var horarioDeClase = $(".tiva-timetable").has("#horarioDeClase");
+        var horarioPersonal = $(".tiva-timetable").has("#horarioPersonal");
         if (registroDispo) {
             $('#registroDispo').each(function() {
                 var mode = 'day';
@@ -130,6 +158,33 @@
         }
         if (horarioDeClase) {
             $('#horarioDeClase').each(function() {
+                var mode = 'day';
+                var timetable_contain = $(this);
+                var timetable_json = 'vendor/tivatimetable/timetables_day.json';
+
+                $.getJSON(timetable_json, function(data) {
+                    tiva_timetables = [];
+
+                    for (var i = 0; i < data.items.length; i++) {
+                        tiva_timetables.push(data.items[i]);
+                    }
+
+                    // Sort timetables by date
+                    tiva_timetables.sort(sortByTime);
+                    for (var j = 0; j < tiva_timetables.length; j++) {
+                        tiva_timetables[j].id = j;
+                    }
+
+                    // Create timetable
+                    var todayDate = new Date();
+                    var date_start = (typeof timetable_contain.attr('data-start') != "undefined") ? timetable_contain.attr('data-start') : 'sunday';
+                    var tiva_current_week = new Date(todayDate.setDate(tiva_current_date.getDate() - todayDate.getDay() + 1));
+                    createTimetable(timetable_contain, 'current', tiva_current_week, tiva_current_month, tiva_current_year);
+                });
+            });
+        }
+        if (horarioPersonal) {
+            $('#horarioPersonal').each(function() {
                 var mode = 'day';
                 var timetable_contain = $(this);
                 var timetable_json = 'vendor/tivatimetable/timetables_day.json';

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main Intranet Columbia</title>
+
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs-min.css"> -->
+        <link rel="stylesheet" href="vendor/inputs/css/bootstrap-inputs.css">
+        <link rel="stylesheet" href="vendor/simplebar/simplebar.css">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish.css" media="screen">
+        <link rel="stylesheet" href="vendor/superfish/css/superfish-vertical.css" media="screen">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
+        <link rel="stylesheet" href="vendor/tivatimetable/css/timetable.css">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <img class="main-logo" src="img/logo-columbia.svg" alt="">
+                        <img class="isotipo" src="img/isotipo-blanco.svg" alt="">
+                    </div>
+
+                    <div class="profile-sidebar">
+                        <div class="profile-greeting">
+                            Bienvenida <strong>Andrea</strong>
+                        </div>
+                        <div class="profile-userpic">
+                            <img src="img/user/user.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Andrea Montenegro Velez
+                            </div>
+                            <div class="profile-usertitle-career">
+                                AVIACIÓN COMERCIAL
+                            </div>
+                        </div>
+                        <div class="profile-userbuttons">
+                            <button type="button" class="btn btn-sm">Mi Perfil</button>
+                        </div>
+                    </div>
+
+                    <ul id="menuExpanded" class="list-unstyled components">
+                        <li class="active">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="academico">
+                            <a href="#academicoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Académico</a>
+                            <ul class="collapse list-unstyled" id="academicoSubmenu">
+                                <li>
+                                    <a href="#">Académico 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="horarios">
+                            <a href="#horariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Horarios</a>
+                            <ul class="collapse list-unstyled" id="horariosSubmenu">
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="pagos">
+                            <a href="#pagosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pagos</a>
+                            <ul class="collapse list-unstyled" id="pagosSubmenu">
+                                <li>
+                                    <a href="#">Pagos 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tramites">
+                            <a href="#tramitesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Trámites</a>
+                            <ul class="collapse list-unstyled" id="tramitesSubmenu">
+                                <li>
+                                    <a href="#">Trámites 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="descargas">
+                            <a href="#descargasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Descargas</a>
+                            <ul class="collapse list-unstyled" id="descargasSubmenu">
+                                <li>
+                                    <a href="#">Descargas 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                        <li class="reglamento-link">
+                            <a href="#">Reglamento</a>
+                        </li>
+                        <li class="encuesta-link">
+                            <a href="#">Encuesta</a>
+                        </li>
+                    </ul>
+                    
+                    <ul id="menuCollapsed" class="sf-menu sf-vertical">
+                        <li>
+                            <a href="#">
+                                <img src="img/menu/inicio.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/academico.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Académico 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Académico 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/horario.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Horarios 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Horarios 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/pagos.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Pagos 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagos 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/tramites.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Trámites 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trámites 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="img/menu/descargas.svg" alt="">
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">Descargas 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Descargas 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="email-link">
+                            <a href="#">Correo</a>
+                        </li>
+                        <li class="reglamento-link">
+                            <a href="#">Reglamento</a>
+                        </li> -->
+                    </ul>
+                </nav>
+
+                <div id="content">
+                    <div class="toolbar">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="button_container" id="sidebarCollapse">
+                                        <span class="top"></span>
+                                        <span class="middle"></span>
+                                        <span class="bottom"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="buttons-top">
+                                        <a href="#" class="notif"> </a>
+                                        <a href="#" class="logout"> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mainWrapper">
+                        <div class="col-md-12 p-0">
+                            <div id="headerSlider" class="mainslider owl-carousel">
+                                <div><img src="img/slider/slide1.jpg" alt=""></div>
+                                <div><img src="img/slider/slide2.jpg" alt=""></div>
+                                <div><img src="img/slider/slide3.jpg" alt=""></div>
+                                <div><img src="img/slider/slide4.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="col-md-12 my-4 text-center">
+                                <div class="main-title"><strong>Mis</strong> | Cursos</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-2">
+                                    <div class="input select">
+                                        <select id="select1">
+                                            <option>2018 II</option>
+                                            <option>2018 IV</option>
+                                        </select>
+                                        <!-- <label for="select1">Acción</label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mb-4">
+                            <div class="row dataCards">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="border-container">
+                                                <h6 class="card-subtitle mb-1 text-muted">Sede</h6>
+                                                <h5 class="card-title mb-0">SAN ISIDRO</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="border-container">
+                                                <h6 class="card-subtitle mb-1 text-muted">Cursos Matriculados</h6>
+                                                <h5 class="card-title mb-0">6</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="border-container">
+                                                <h6 class="card-subtitle mb-1 text-muted">Créditos</h6>
+                                                <h5 class="card-title mb-0">20</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="border-container">
+                                                <h6 class="card-subtitle mb-1 text-muted">Horas</h6>
+                                                <h5 class="card-title mb-0">30</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mb-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="cursos-acordion">
+                                        <div class="evolucion-aviacion er-acordion">
+                                            <a href="#evolucionaviacion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">1 | Evolución de la Aviación</a>
+                                            <div class="collapse list-unstyled show" id="evolucionaviacion">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geografia-aerocomercial er-acordion">
+                                            <a href="#geografiaAerocomercial" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2 | Geografía Aerocomercial</a>
+                                            <div class="collapse list-unstyled" id="geografiaAerocomercial">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geografia-aerocomercial er-acordion">
+                                            <a href="#geografiaAerocomercial" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2 | Geografía Aerocomercial</a>
+                                            <div class="collapse list-unstyled" id="geografiaAerocomercial">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geografia-aerocomercial er-acordion">
+                                            <a href="#geografiaAerocomercial" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2 | Geografía Aerocomercial</a>
+                                            <div class="collapse list-unstyled" id="geografiaAerocomercial">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geografia-aerocomercial er-acordion">
+                                            <a href="#geografiaAerocomercial" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2 | Geografía Aerocomercial</a>
+                                            <div class="collapse list-unstyled" id="geografiaAerocomercial">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="geografia-aerocomercial er-acordion">
+                                            <a href="#geografiaAerocomercial" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2 | Geografía Aerocomercial</a>
+                                            <div class="collapse list-unstyled" id="geografiaAerocomercial">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div class="card-container d-flex">
+                                                            <div class="col-md-6 p-0 d-flex align-items-center">
+                                                                <div class="card">
+                                                                  <div class="card-body d-flex py-0">
+                                                                    <div class="col-md-4">
+                                                                        <div class="profile-userpic">
+                                                                            <img class="card-img" src="img/profesor/prosor.jpg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="card-title bolder">Docente:</h5>
+                                                                        <h6 class="card-title">Ivan José Cruz Peña</h6>
+                                                                        <p class="card-text">cruzpeña@columbia.net</p>
+                                                                        <a href="#" class="btn btn-sm">Compañeros</a>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 p-0">
+                                                                <div class="card">
+                                                                    <div class="card-body cursos-data py-0">
+                                                                        <div class="card-data">
+                                                                            <strong>Aula:</strong>
+                                                                            <span>201</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horario:</strong>
+                                                                            <span>Lun - 10:00 am. a 12:00 pm.</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Créditos:</strong>
+                                                                            <span>3</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Promedio:</strong>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                        <div class="card-data">
+                                                                            <strong>Horas semanales:</strong>
+                                                                            <span>6</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="card-container ciclo-stats d-flex">
+                                                            <div class="col-md-12">
+                                                                <h5>Ciclo II</h5>
+                                                                <div class="stat-asistencia">
+                                                                    <span>Asistencias</span>
+                                                                    <div class="ciclo-porcentaje">98%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-inasistencia">
+                                                                    <span>Inasistencias</span>
+                                                                    <div class="ciclo-porcentaje">58%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="stat-tardanza">
+                                                                    <span>Tardanzas</span>
+                                                                    <div class="ciclo-porcentaje">12%</div>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/inputs/js/inputs.js"></script>
+        <script src="vendor/simplebar/simplebar.js"></script>
+        <script src="vendor/superfish/js/hoverIntent.js"></script>
+        <script src="vendor/superfish/js/superfish.js"></script>
+        <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
+        <script src="vendor/flatpickr/flatpickr.js"></script>
+        <script src="vendor/tivatimetable/js/timetable.js"></script>
+        <script src="js/custom.js"></script>        
+    </body>
+</html>

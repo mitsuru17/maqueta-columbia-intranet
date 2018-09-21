@@ -201,6 +201,14 @@ body.profesor li.horarios{border-left-color:#7be215;}
     background: #00ACC1;
     color: white;
 }
+.reglamento-link{
+    background: #ff9400;
+    color: white;
+}
+.encuesta-link{
+    background: #7be215;
+    color: white;
+}
 
 /*SIDEBAR USER PROFILE*/
 .profile-sidebar {
@@ -259,7 +267,7 @@ CONTENT STYLE
 
 /*MAINSLIDER*/
 .mainslider{
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 }
 /*MAINWRAPPER*/
 .mainWrapper .col-md-12:first-child img{
@@ -466,8 +474,6 @@ CONTENT STYLE
 }
 #avanceContainer {
     margin-top: 40px;
-    /*height: 300px;
-    overflow-y: scroll;*/
 }
 
 /*CAMBIOS CURSOS*/
@@ -704,6 +710,10 @@ CONTENT STYLE
     background-image: url(../img/link-cursos.jpg);
     margin-right: 10px;
 }
+.img-overlay-wrapper a:nth-child(2){
+    background-image: url(../img/link-asistencia.jpg);
+    margin-right: 10px;
+}
 .img-overlay-wrapper a:last-child{
     background-image: url(../img/link-notas.jpg);
 }
@@ -822,6 +832,147 @@ CONTENT STYLE
 #notasRegistro tbody td.text-center{
     border: 1px inset #cacaca;
 }
+
+/*Carrusel novedades (books)*/
+.book img{
+    height: 290px;
+}
+.arrow-books.arrow-left{
+    left: 4px !important;
+}
+.arrow-books.arrow-right{
+    right: 4px !important;
+}
+
+/*erCarrusel*/
+#booksCarrusel .owl-item {
+    height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/*.owl-stage .owl-item.active:nth-child(1) {
+    zoom: .7 !important;
+    width: auto !important;
+}*/
+
+/*MIS CURSOS*/
+.dataCards .border-container{
+    border-left: 1px solid #003aa5;
+    padding-left: 8px;
+}
+.dataCards .card-body{
+    padding: 2rem 1.25rem;
+}
+.dataCards .card-title{
+    font-weight: 600;
+}
+.cursos-acordion .dropdown-toggle{
+    width: 100%;
+    display: block;
+}
+
+.er-acordion{
+    margin-bottom: 10px;
+}
+.er-acordion a.dropdown-toggle{
+    color: white;
+    padding: 10px 0 10px 20px;
+}
+
+/*.evolucion-aviacion a, .evolucion-aviacion .ciclo-stats{
+    background-color: #00c1a4 !important;
+}
+.geografia-aerocomercial a, .geografia-aerocomercial .ciclo-stats{
+    background-color: #01a7fd !important;
+}*/
+
+.er-acordion:nth-child(1n) a.dropdown-toggle, .er-acordion:nth-child(1n) .ciclo-stats, .er-acordion:nth-child(1n) .card-body a.btn{
+    background-color: #00c1a4;
+}
+.er-acordion:nth-child(2n) a.dropdown-toggle, .er-acordion:nth-child(2n) .ciclo-stats, .er-acordion:nth-child(2n) .card-body a.btn{
+    background-color: #01a7fd;
+}
+.er-acordion:nth-child(3n) a.dropdown-toggle, .er-acordion:nth-child(3n) .ciclo-stats, .er-acordion:nth-child(3n) .card-body a.btn{
+    background-color: #4467e5 !important;
+}
+.er-acordion:nth-child(3n+1) a.dropdown-toggle , .er-acordion:nth-child(3n+1) .ciclo-stats, .er-acordion:nth-child(3n+1) .card-body a.btn{
+    background: #00c1a4 !important;
+}
+.er-acordion:nth-child(2n+1) a.dropdown-toggle , .er-acordion:nth-child(2n+1) .ciclo-stats, .er-acordion:nth-child(2n+1) .card-body a.btn{
+    background: #01a7fd;
+}
+
+/*p:nth-child(1n) { background: #00c1a4; }
+p:nth-child(2n) { background: #01a7fd; }
+p:nth-child(3n) { background: red !important; }
+p:nth-child(3n+1) { background: #00c1a4 !important; }
+p:nth-child(2n+1) { background: #01a7fd; }*/
+
+.er-acordion .card-container{
+    padding: 20px;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin: 30px 0;
+    min-height: 241px;
+}
+.er-acordion .card-container .card{
+    border: 0;
+}
+
+.cursos-data .card-data {
+    font-size: 13px;
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+.cursos-data .card-data:first-child{
+    border: 0;
+}
+.cursos-data .card-data strong{
+    width: 40%;
+    font-weight: 600;
+}
+.cursos-data .card-data span{
+    width: 60%;
+}
+.er-acordion .card-container h6.card-title{
+    font-size: 16px;
+}
+.er-acordion .card-container .card-text{
+    font-size: 14px;
+}
+.er-acordion .col-md-8 a{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: white;
+}
+.er-acordion .ciclo-stats{
+    width: 100%;
+    min-height: 241px;
+    color: white;
+}
+.er-acordion .ciclo-stats .stat-asistencia, .er-acordion .ciclo-stats .stat-inasistencia, .er-acordion .ciclo-stats .stat-tardanza{
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+.er-acordion .ciclo-porcentaje{
+    font-size: 15px;
+    line-height: 18px;
+}
+.er-acordion .progress{
+    background-color: rgba(8, 8, 8, 0.19);
+}
+.er-acordion .progress .progress-bar{
+    background-color: white;
+}
+.er-acordion .card-container{
+    box-shadow: 2px 2px 8px #969696;
+}
+
 
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
