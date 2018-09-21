@@ -1,94 +1,13 @@
 {
     "items": [
 		{
-			"curso": "Chino",
-			"aula": "201",
-			"sede": "Los Olivos",
+			"name": "Deberes y Responsabilidades del Tripulante de Cabina y Autoridades del Piloto",
 			"day": "lunes",
-			"start_time": "07:00",
-			"end_time": "09:00",
-			"color": "1"
-		},
-		{
-			"curso": "Inglés",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "lunes",
-			"start_time": "09:00",
-			"end_time": "11:00",
-			"color": "2"
-		},
-		{
-			"curso": "Portugués",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "martes",
-			"start_time": "10:00",
-			"end_time": "12:00",
-			"color": "3"
-		},
-		{
-			"curso": "Inglés",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "martes",
-			"start_time": "14:00",
+			"start_time": "13:30",
 			"end_time": "16:00",
-			"color": "5"
-		},
-		{
-			"curso": "Alemán",
-			"aula": "201",
-			"sede": "Lince",
-			"day": "miercoles",
-			"start_time": "07:00",
-			"end_time": "09:00",
-			"color": "4"
-		},
-		{
-			"curso": "Inglés",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "miercoles",
-			"start_time": "10:00",
-			"end_time": "12:00",
-			"color": "2"
-		},
-		{
-			"curso": "Chino",
 			"aula": "201",
 			"sede": "Los Olivos",
-			"day": "jueves",
-			"start_time": "09:00",
-			"end_time": "11:00",
-			"color": "1"
-		},
-		{
-			"curso": "Inglés",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "jueves",
-			"start_time": "14:00",
-			"end_time": "16:00",
-			"color": "5"
-		},
-		{
-			"curso": "Portugués",
-			"aula": "501",
-			"sede": "San Isidro",
-			"day": "viernes",
-			"start_time": "07:00",
-			"end_time": "09:00",
-			"color": "3"
-		},
-		{
-			"curso": "Alemán",
-			"aula": "201",
-			"sede": "Los Olivos",
-			"day": "viernes",
-			"start_time": "09:00",
-			"end_time": "11:00",
-			"color": "4"
+			"profesor": "Charles Xavier"
 		}
 	]
 }

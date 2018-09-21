@@ -880,13 +880,6 @@ CONTENT STYLE
     padding: 10px 0 10px 20px;
 }
 
-/*.evolucion-aviacion a, .evolucion-aviacion .ciclo-stats{
-    background-color: #00c1a4 !important;
-}
-.geografia-aerocomercial a, .geografia-aerocomercial .ciclo-stats{
-    background-color: #01a7fd !important;
-}*/
-
 .er-acordion:nth-child(1n) a.dropdown-toggle, .er-acordion:nth-child(1n) .ciclo-stats, .er-acordion:nth-child(1n) .card-body a.btn{
     background-color: #00c1a4;
 }
@@ -902,12 +895,6 @@ CONTENT STYLE
 .er-acordion:nth-child(2n+1) a.dropdown-toggle , .er-acordion:nth-child(2n+1) .ciclo-stats, .er-acordion:nth-child(2n+1) .card-body a.btn{
     background: #01a7fd;
 }
-
-/*p:nth-child(1n) { background: #00c1a4; }
-p:nth-child(2n) { background: #01a7fd; }
-p:nth-child(3n) { background: red !important; }
-p:nth-child(3n+1) { background: #00c1a4 !important; }
-p:nth-child(2n+1) { background: #01a7fd; }*/
 
 .er-acordion .card-container{
     padding: 20px;
@@ -973,6 +960,22 @@ p:nth-child(2n+1) { background: #01a7fd; }*/
     box-shadow: 2px 2px 8px #969696;
 }
 
+/*HORARIO*/
+.timetable-column:nth-child(1n) a.timetable-title{
+    background-color: #00c1a4;
+}
+.timetable-column:nth-child(2n) a.timetable-title{
+    background-color: #01a7fd;
+}
+.timetable-column:nth-child(3n) a.timetable-title{
+    background-color: #4467e5 !important;
+}
+.timetable-column:nth-child(3n+1) a.timetable-title{
+    background: #00c1a4 !important;
+}
+.timetable-column:nth-child(2n+1) a.timetable-title{
+    background: #01a7fd;
+}
 
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
