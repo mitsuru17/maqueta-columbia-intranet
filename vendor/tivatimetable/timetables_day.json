@@ -8,6 +8,51 @@
 			"aula": "201",
 			"sede": "Los Olivos",
 			"profesor": "Charles Xavier"
+		},
+		{
+			"name": "Geografia Aerocomercial",
+			"day": "lunes",
+			"start_time": "19:00",
+			"end_time": "21:00",
+			"aula": "201",
+			"sede": "Los Olivos",
+			"profesor": "Charles Xavier"
+		},
+		{
+			"name": "Seguridad en la Aviación (AVSEC)",
+			"day": "martes",
+			"start_time": "17:00",
+			"end_time": "17:50",
+			"aula": "201",
+			"sede": "Los Olivos",
+			"profesor": "Charles Xavier"
+		},
+		{
+			"name": "Calidad en los Servicios Aeroportuarios",
+			"day": "miercoles",
+			"start_time": "15:00",
+			"end_time": "16:00",
+			"aula": "201",
+			"sede": "Los Olivos",
+			"profesor": "Charles Xavier"
+		},
+		{
+			"name": "Soporte Tecnológico II",
+			"day": "jueves",
+			"start_time": "18:00",
+			"end_time": "19:00",
+			"aula": "201",
+			"sede": "Los Olivos",
+			"profesor": "Charles Xavier"
+		},
+		{
+			"name": "Airport Contingencies & Customer Service",
+			"day": "viernes",
+			"start_time": "14:00",
+			"end_time": "15:00",
+			"aula": "201",
+			"sede": "Los Olivos",
+			"profesor": "Charles Xavier"
 		}
 	]
 }

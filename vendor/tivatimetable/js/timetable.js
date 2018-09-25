@@ -504,7 +504,7 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
 		// wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri, wordDay_sat, wordDay_sun);
 		wordDay = new Array(wordDay_mon, wordDay_tue, wordDay_wed, wordDay_thu, wordDay_fri);
 
-		dayArr = new Array("lunes", "martes", "miércoles", "jueves", "viernes");
+		dayArr = new Array("lunes", "martes", "miercoles", "jueves", "viernes");
 
 	}
 
@@ -713,7 +713,7 @@ function timetableWeek(el, tiva_timetables, firstDayWeek) {
 
 																+ timetables[t].name
 
-																+ '<div class="timetable-time">' + timetables[t].start_time + timetable_end_time + '</div>'
+																+ '<div>' + timetables[t].start_time + timetable_end_time + '</div>'
 
 																+ '<div class="timetable-desc">'
 																	+ '<div class="timetable-aula">Aula: ' + timetables[t].aula + '</div>'

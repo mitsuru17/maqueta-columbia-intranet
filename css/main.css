@@ -977,6 +977,42 @@ CONTENT STYLE
     background: #01a7fd;
 }
 
+/*DESCARGA DE MATERIAL ALUMNO*/ 
+#descargaMaterial .file-ico{
+    width: 42px;
+    height: 48px;
+}
+
+#alumnosEncuestas .card-body img{
+    width: 90px;
+    margin-bottom: 10px;
+}
+#alumnosEncuestas .card-body button{
+    background: #00c1a4;
+    padding: 3px 20px;
+    font-size: 12px;
+    border-radius: 16px;
+    border: 0;
+}
+
+/*Alumnos Tramites*/
+.tramites-acordion .dropdown-toggle{
+    width: 100%;
+    display: block;
+}    
+#alumnosTramites .er-acordion a.dropdown-toggle{
+    background-color: #003ba1 !important;
+}
+#alumnosTramites .aceptada .ciclo-stats{
+    background-color: #6cc72a !important;
+}
+#alumnosTramites .entramite .ciclo-stats{
+    background-color: #ff9400 !important;
+}
+#alumnosTramites .rechazada .ciclo-stats{
+    background-color: #e12229 !important;
+}
+
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
     background: #4c4c4c;
