@@ -828,7 +828,6 @@ CONTENT STYLE
     width: 100%;
     padding-left: 4px;
 }
-
 #notasRegistro tbody td.text-center{
     border: 1px inset #cacaca;
 }
@@ -1012,6 +1011,13 @@ CONTENT STYLE
 #alumnosTramites .rechazada .ciclo-stats{
     background-color: #e12229 !important;
 }
+
+/*ALUMNOS RECORD DE NOTAS*/
+#recordDeNotas table td { padding: 4px; font-size: 14px; }
+#recordDeNotas thead th.text-center { width: 48px; }
+#recordDeNotas tbody > tr td:last-child { margin: 0 auto; text-align: center; }
+#recordDeNotas tbody > tr td:last-child input { width: 100%; padding-left: 4px; }
+#recordDeNotas tbody td.text-center { border: 1px inset #cacaca; }
 
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
