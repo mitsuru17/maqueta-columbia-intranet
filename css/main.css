@@ -1019,6 +1019,12 @@ CONTENT STYLE
 #recordDeNotas tbody > tr td:last-child input { width: 100%; padding-left: 4px; }
 #recordDeNotas tbody td.text-center { border: 1px inset #cacaca; }
 
+/*ALUMNOS PAGOS*/
+#alumnosPagos .pre-table .estado { width: 120px; }
+#alumnosPagos table td { padding: 4px; font-size: 14px; }
+#alumnosPagos table thead th { background: #666666; color: white; font-weight: 100; border-right: 1px solid white; }
+#alumnosPagos table tbody td span { width: 12px; height: 12px; border-radius: 50%; }
+
 /*PROFESOR CUSTOM*/
 body.profesor .profile-userbuttons .btn {
     background: #4c4c4c;
