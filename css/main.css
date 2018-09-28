@@ -16,7 +16,7 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 }
 
 /* ---------------------------------------------------
-    SIDEBAR STYLE
+    TOOLBAR  STYLE
 ----------------------------------------------------- */
 .toolbar {
     position: fixed;
@@ -34,6 +34,10 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     padding: 0;
     margin: 0;
 }
+    .toolbar.active {
+        left: 80px;
+        width: calc(100vw - 80px);
+    }
 
 /*Burguer Menu*/
 .button_container {
@@ -54,7 +58,12 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
 .button_container span { background: #999; border: none; height: 4px; width: 100%; position: absolute; top: 0; left: 0; -webkit-transition: all .35s ease; transition: all .35s ease; cursor: pointer; border-radius: 6px; }
 .button_container span:nth-of-type(2) { top: 8px; }
 .button_container span:nth-of-type(3) { top: 16px; }
-.buttons-top { text-align: right; position: absolute; right: 4%; }
+.buttons-top {
+    text-align: right;
+    position: relative;
+    top: 5%;
+    right: 2%;
+}
 
 /*Buttons-top*/
 .notif { display: inline-block; background: url(../img/notificacion.svg); background-size: cover; background-repeat: no-repeat; width: 26px; height: 26px; }
@@ -64,7 +73,10 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     display: flex;
     align-items: stretch;
 }
-/*SIDEBAR*/
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -145,12 +157,14 @@ a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3
     #sidebar.active #menuCollapsed{
         display: block;
     }
-    /*#sidebar.active .mCSB_container{
-        overflow: unset;
-    }
-    #sidebar.active .mCustomScrollBox{
-        overflow: unset;
-    }*/
+
+#sidebar.mobile {
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -247,11 +261,10 @@ CONTENT STYLE
     #content.active{
         width: calc(100vw - 80px);
     }
-    #content.active .toolbar {
-        left: 80px;
-        width: calc(100vw - 80px);
-    }
 
+/*#content.mobile{
+    filter: blur(4px) grayscale(60%);
+}*/
 /*Custom Scroll Bar*/
 .mCSB_dragger_bar {
     margin-right: 0 !important;
@@ -667,29 +680,10 @@ CONTENT STYLE
 
 /*FANCY CARRUSEL NAV*/
 .fancy-carousel-nav { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; display: flex; align-items: center; }
-.arrowfancy {
-    position: absolute;
-    padding: 12px;
-    box-shadow: 1px -1px 0 1px #57585c inset;
-    -webkit-box-shadow: 2px -2px #57585c inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transition: 0.2s;
-    z-index: 98;
-}
-.arrowfancy:hover {
-    box-shadow: 3px -3px #29292b inset;
-    -webkit-box-shadow: 3px -3px #29292b inset;
-}
-.arrow-left {
-    transform: rotate(45deg);
-    left: 14px;
-}
-
-.arrow-right {
-    transform: rotate(225deg);
-    right: 16px;
-}
+.arrowfancy { position: absolute; padding: 12px; box-shadow: 1px -1px 0 1px #57585c inset; -webkit-box-shadow: 2px -2px #57585c inset; border: solid transparent; border-width: 0 0 2px 2px; transition: 0.2s; z-index: 98; }
+.arrowfancy:hover { box-shadow: 3px -3px #29292b inset; -webkit-box-shadow: 3px -3px #29292b inset; }
+.arrow-left { transform: rotate(45deg); left: 14px; }
+.arrow-right { transform: rotate(225deg); right: 16px; }
 
 /*INICIO*/
 .img-overlay-wrapper{
@@ -759,62 +753,22 @@ CONTENT STYLE
     font-size: 12px;
 }
 /*REGISTRO NOTAS*/
-#registroNotas .card{
-    text-align: center;
-}
-#registroNotas .card-sede{
-    margin: 0 auto;
-}
-#registroNotas .card-sede, #registroNotas .card-sede strong, #registroNotas .card-sede span{
-    width: 50%;
-}
-#registroNotas .card-subtitle::after{
-    margin: 10px auto 0 !important;
-}
+#registroNotas .card { text-align: center; }
+#registroNotas .card-sede { margin: 0 auto; }
+#registroNotas .card-sede, #registroNotas .card-sede strong, #registroNotas .card-sede span { width: 50%; }
+#registroNotas .card-subtitle::after { margin: 10px auto 0 !important; }
 
 /*PERFIL*/
-.perfil-title {
-    color: #003aa6;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.datos-perfil{
-    margin-bottom: 30px;
-    font-size: 14px;
-}
-.datos-perfil div{
-    display: flex;
-    width: 100%;
-    padding: 8px;
-    border-top: 1px solid #ececec;
-}
-.datos-perfil strong{
-    font-weight: 600;
-}
-.datos-perfil strong, .datos-perfil span{
-    width: 50%;
-}
-
-.perfil-sidebar{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.perfil-sidebar img, .perfil-sidebar button{
-    width: 240px;
-}
-.perfil-sidebar button{
-    margin-top: 6px;
-    color: white;
-    font-size: 16px;
-}
-#cambiarFoto{
-    background: #f8c420;
-}
-#cambiarPassword{
-    background: #01b0ab;
-}
+.perfil-title { color: #003aa6; font-size: 20px; font-weight: 600; margin-bottom: 10px; }
+.datos-perfil { margin-bottom: 30px; font-size: 14px; }
+.datos-perfil div { display: flex; width: 100%; padding: 8px; border-top: 1px solid #ececec; }
+.datos-perfil strong { font-weight: 600; }
+.datos-perfil strong, .datos-perfil span { width: 50%; }
+.perfil-sidebar { display: flex; flex-flow: column; align-items: center; }
+.perfil-sidebar img, .perfil-sidebar button { width: 240px; }
+.perfil-sidebar button { margin-top: 6px; color: white; font-size: 16px; }
+#cambiarFoto { background: #f8c420; }
+#cambiarPassword { background: #01b0ab; }
 
 /*NOTAS REGISTRO*/
 #notasRegistro thead th.text-center{
@@ -1033,25 +987,49 @@ body.profesor .profile-userbuttons .btn {
 /* ---------------------------------------------------
 MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width:768px) {
-    #sidebar {
+@media (max-width: 768px) {
+    .mainWrapper{
+        margin-top: 0 !important;
+    }
+    #sidebar{
         margin-left: -250px;
+        z-index: 900;
+    }
+    #sidebar .sidebar-header{
+        visibility: hidden;
     }
 
-    #sidebar.active {
-        margin-left: 0;
+    .toolbar{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 1000;
     }
-
-    #content {
+    #content{
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 800;
+    }
+}
+@media (max-width: 480px) {
+    #sidebar.mobile{
+        max-width: 100%;
         width: 100%;
     }
-
-    #content.active {
-        width: calc(100% - 250px);
+    .tab-wrapper .nav{
+        padding-left: 0;
     }
-
-    #sidebarCollapse span {
-        display: none;
+    .tab-wrapper .tab-content{
+        padding: 20px 0;
     }
-
+    #alumnos .pre-table .col-md-6:first-child{
+        align-items: center; 
+    }
+    #alumnos .pre-table .col-md-6{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
 }

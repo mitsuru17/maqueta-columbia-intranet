@@ -79,10 +79,22 @@
         new SimpleBar($('#menuExpanded')[0]);
         new SimpleBar($('.mainWrapper')[0]);
 
-        $("#sidebarCollapse").click(function() {
-            $('#sidebar, #content').toggleClass('active');
-            setTimeout(reloadSlider, 200);
-        });
+        if($(window).width()>=769){
+            $("#sidebarCollapse").click(function() {
+                $('#sidebar, #content, .toolbar').toggleClass('active');
+                setTimeout(reloadSlider, 200);
+            });
+        }else{
+            $("#sidebarCollapse").click(function() {
+                $('#sidebar, #content, .toolbar').toggleClass('mobile');
+                // setTimeout(reloadSlider, 200);
+            });
+        }
+
+        // $("#sidebarCollapse").click(function() {
+        //     $('#sidebar, #content').toggleClass('active');
+        //     setTimeout(reloadSlider, 200);
+        // });
 
         $("#asistenciaDate, #materialDate").flatpickr({
             enableTime: true,
@@ -210,6 +222,12 @@
                 });
             });
         }
+
+        var deviceWidth = $(window).width();
+        var deviceHeight = $(window).height();
+
+        // $("#edd").html('Ancho: ' + deviceWidth + '<br>' + 'Alto: ' + deviceHeight);
+
     });
 
     function reloadSlider() {

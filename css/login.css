@@ -201,9 +201,19 @@ body {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=!string!width=!string!height=!string!%3E%3Ctext x=!string!y=!string!font-size=!string!font-family=!string!fill=!string!%3ESi%3C/text%3E%3C/svg%3E");
 }
 
-@media screen and (min-width:768px) {
+/*@media screen and (min-width:768px) {
 	.login .main {
 		background-position: center;
 	}
+}*/
 
+@media (max-width:768px) {
+	.login .wrapper .col-md-6:first-child{
+		display: none;
+	}
+}
+@media (max-width:767px) {
+	.block-login{
+		padding: 0;
+	}
 }

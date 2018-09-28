@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="vendor/owlcarousel2/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
         <link rel="stylesheet" href="vendor/simplebar/simplebar.css">
+        <link rel="stylesheet" href="vendor/responsive-tables/responsive-tables.css">
 
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -167,28 +168,31 @@
                         </li>
                     </ul>
                 </nav>
-
-                <div id="content">
-                    <div class="toolbar">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="button_container" id="sidebarCollapse">
-                                        <span class="top"></span>
-                                        <span class="middle"></span>
-                                        <span class="bottom"></span>
-                                    </div>
+                
+                <div class="toolbar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col d-flex align-items-center">
+                                <div class="button_container" id="sidebarCollapse">
+                                    <span class="top"></span>
+                                    <span class="middle"></span>
+                                    <span class="bottom"></span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="buttons-top">
-                                        <a href="#" class="notif"> </a>
-                                        <a href="#" class="logout"> </a>
-                                    </div>
+                            </div>
+                            <div class="col" id="edd">
+                                <!-- <img class="main-logo" src="img/logo-columbia.svg" alt=""> -->
+                            </div>
+                            <div class="col">
+                                <div class="buttons-top">
+                                    <a href="#" class="notif"> </a>
+                                    <a href="#" class="logout"> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div id="content">
                     <div class="mainWrapper mt-5">
                         <div class="container">
                             <div class="col-md-12 my-4 text-center">
@@ -207,25 +211,25 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="row">
-                                        <div class="col-md-6">Inicio</div>
+                                        <div class="col-md-6 bolder">Inicio:</div>
                                         <div class="col-md-6">26/06/2018</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">Evaluación</div>
+                                        <div class="col-md-6 bolder">Evaluación:</div>
                                         <div class="col-md-6">TIPO A</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">Inscritos:</div>
+                                        <div class="col-md-6 bolder">Inscritos:</div>
                                         <div class="col-md-6">20</div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="row">
-                                        <div class="col-md-6">Programa:</div>
+                                        <div class="col-md-6 bolder">Programa:</div>
                                         <div class="col-md-6">Aviación Comercial</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">Sede:</div>
+                                        <div class="col-md-6 bolder">Sede:</div>
                                         <div class="col-md-6">San Isidro</div>
                                     </div>
                                     <div class="row">
@@ -275,7 +279,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <table class="table">
+                                                <table class="table responsive">
                                                     <thead>
                                                         <tr>
                                                             <th></th>
@@ -999,6 +1003,7 @@
         <script src="vendor/owlcarousel2/owl.carousel.min.js"></script>
         <script src="vendor/flatpickr/flatpickr.js"></script>
         <script src="vendor/simplebar/simplebar.js"></script>
+        <script src="vendor/responsive-tables/responsive-tables.js"></script>
         <script src="js/custom.js"></script>
     </body>
 </html>
