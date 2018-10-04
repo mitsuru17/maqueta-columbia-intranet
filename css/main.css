@@ -544,6 +544,21 @@ CONTENT STYLE
 .cursos-cards .card-horario span, .cursos-cards .card-sede span, .cursos-cards .card-aula span{
     width: 70%;
 }
+a.fancy-button {
+    margin: 20px auto 0;
+    display: block;
+    background: #00ACC1;
+    color: white;
+    padding: 4px 18px;
+    border-radius: 10px;
+    width: 140px;
+    font-size: 14px;
+    text-align: center;
+}
+a.fancy-button:hover {
+    background: #038d9e;
+    color: white;
+}
 
 .main-cursos{
     background: #f8f8f8 !important;
